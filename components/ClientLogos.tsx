@@ -35,7 +35,7 @@ export function ClientLogos() {
   return (
     <section style={{ padding: "clamp(28px,4vw,44px) 0" }} data-reveal="1">
       <div style={{ maxWidth: 1180, margin: "0 auto", padding: "0 clamp(16px,3vw,30px)" }}>
-        <div style={{ textAlign: "center", fontSize: 12.5, fontWeight: 600, color: "var(--qm-faint)", marginBottom: 20 }}>فرق تبني أشياء جيدة تعمل معنا</div>
+        <div style={{ textAlign: "center", fontSize: 12.5, fontWeight: 600, color: "var(--qm-faint)", marginBottom: 20 }}>عملاء نعتزّ بثقتهم</div>
         <div style={{ overflow: "hidden", WebkitMaskImage: "linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent)", maskImage: "linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent)" }}>
           <div className="hv-pause" style={{ display: "flex", width: "max-content", animation: "qmMarquee 45s linear infinite" }}>
             <LogoRow />

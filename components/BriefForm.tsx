@@ -68,8 +68,8 @@ export function BriefForm() {
     return (
       <div role="status" style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", gap: 14, padding: "36px 10px" }}>
         <span className="msr" aria-hidden="true" style={{ fontSize: 52, color: "var(--qm-teal-deep)" }}>check_circle</span>
-        <h3 style={{ margin: 0, fontSize: 20, fontWeight: 700 }}>تم إرسال طلبك</h3>
-        <p style={{ margin: 0, fontSize: 14.5, lineHeight: 1.8, color: "var(--qm-subtle)", maxWidth: 320 }}>وصلنا طلبك — نقرأه اليوم ونرد عليك خلال 24 ساعة. إن كان الأمر مستعجلًا، راسلنا على واتساب.</p>
+        <h3 style={{ margin: 0, fontSize: 20, fontWeight: 700 }}>وصلنا طلبك</h3>
+        <p style={{ margin: 0, fontSize: 14.5, lineHeight: 1.8, color: "var(--qm-subtle)", maxWidth: 320 }}>نقرؤه اليوم ونرد عليك خلال 24 ساعة بإذن الله. وإذا كان الموضوع مستعجلًا، راسلنا على واتساب.</p>
         <Button variant="soft" icon="edit" onClick={reset}>إرسال طلب آخر</Button>
       </div>
     );
@@ -78,7 +78,7 @@ export function BriefForm() {
   return (
     <form noValidate onSubmit={onSubmit} aria-labelledby="brief-form-title">
       <h3 id="brief-form-title" style={{ margin: "0 0 4px", fontSize: 19, fontWeight: 700 }}>طلب مشروع</h3>
-      <p style={{ margin: "0 0 20px", fontSize: 13, color: "var(--qm-muted)" }}>الحقول المعلَّمة بـ * مطلوبة.</p>
+      <p style={{ margin: "0 0 20px", fontSize: 13, color: "var(--qm-muted)" }}>الحقول التي عليها * مطلوبة.</p>
 
       <Field label="الاسم الكامل *">
         <input className="qm-control" name="name" maxLength={MAX_LENGTH.name} autoComplete="name" aria-required="true" placeholder="مثال: سارة العبدالله" value={form.name} onChange={set("name")} />
@@ -94,11 +94,11 @@ export function BriefForm() {
       </div>
 
       <Field label="الشركة / الجهة">
-        <input className="qm-control" name="company" maxLength={MAX_LENGTH.company} autoComplete="organization" placeholder="اسم شركتك — أو اتركه فارغًا" value={form.company} onChange={set("company")} />
+        <input className="qm-control" name="company" maxLength={MAX_LENGTH.company} autoComplete="organization" placeholder="اسم شركتك (اختياري)" value={form.company} onChange={set("company")} />
       </Field>
 
       <Field label="وصف المشروع *">
-        <textarea className="qm-control" name="desc" maxLength={MAX_LENGTH.desc} aria-required="true" placeholder="ما الذي تريد بناءه؟ ولمن؟ وما أهم شيء يجب أن ينجح؟" value={form.desc} onChange={set("desc")} />
+        <textarea className="qm-control" name="desc" maxLength={MAX_LENGTH.desc} aria-required="true" placeholder="ما الذي تريد بناءه؟ ولمن؟ وما أهم شيء يهمّك فيه؟" value={form.desc} onChange={set("desc")} />
       </Field>
 
       <div style={twoCols}>

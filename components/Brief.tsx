@@ -2,9 +2,9 @@ import { BriefForm } from "@/components/BriefForm";
 import { site } from "@/lib/site";
 
 const PROMISES = [
-  "رد خلال 24 ساعة، من شخص لا من نموذج آلي",
-  "جلسة استكشاف مجانية 45 دقيقة",
-  "اتفاقية سرية عند الطلب — فكرتك تبقى لك",
+  "يرد عليك شخص من الفريق خلال 24 ساعة",
+  "جلسة أولى مجانية مدتها 45 دقيقة",
+  "نوقّع اتفاقية سرية إذا طلبت، وفكرتك تبقى لك",
 ];
 
 export function Brief() {
@@ -14,11 +14,11 @@ export function Brief() {
         <div style={{ background: "var(--qm-gradient-hero)", borderRadius: 24, padding: "clamp(24px,3.4vw,44px)", boxShadow: "var(--qm-shadow-raised)", display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(min(100%,320px),1fr))", gap: "clamp(26px,3.5vw,46px)", alignItems: "start" }}>
           <div>
             <h2 style={{ margin: "0 0 16px", fontSize: "clamp(26px,3.2vw,40px)", fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.4, color: "#fff" }}>
-              أخبرنا عن مشروعك،
+              كلّمنا عن مشروعك،
               <br />
               ونرجع لك بخطة واضحة.
             </h2>
-            <p style={{ margin: "0 0 26px", fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,.78)", maxWidth: 440 }}>املأ الطلب في دقيقتين. نقرأه بأنفسنا، ونرد خلال 24 ساعة برأي صريح: هل نحن الفريق المناسب لمشروعك أم لا.</p>
+            <p style={{ margin: "0 0 26px", fontSize: 16, lineHeight: 1.8, color: "rgba(255,255,255,.78)", maxWidth: 440 }}>عبّئ الطلب في دقيقتين. نقرؤه بأنفسنا ونرد عليك خلال 24 ساعة برأي صريح: نقدر نخدمك أو لا.</p>
             <div style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 28 }}>
               {PROMISES.map((text) => (
                 <div key={text} style={{ display: "flex", alignItems: "flex-start", gap: 11, color: "rgba(255,255,255,.9)" }}>

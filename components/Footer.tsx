@@ -8,7 +8,7 @@ export function Footer() {
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(200px,1fr))", gap: "clamp(22px,3vw,40px)", paddingBottom: 30, borderBottom: "1px solid var(--qm-hairline)" }}>
           <div>
             <Image src="/brand/logo.png" alt="قمّة كود" width={92} height={26} unoptimized style={{ height: 26, width: "auto", display: "block", marginBottom: 12 }} />
-            <p style={{ margin: 0, fontSize: 13.5, lineHeight: 1.8, color: "var(--qm-subtle)", maxWidth: 260 }}>استوديو تطوير برمجيات عربي أولًا. نبني منتجات تُطلق، وتكبر مع أصحابها.</p>
+            <p style={{ margin: 0, fontSize: 13.5, lineHeight: 1.8, color: "var(--qm-subtle)", maxWidth: 260 }}>استوديو برمجيات، والعربية عندنا أولًا. نبني منتجات تصل إلى السوق وتكبر مع أصحابها.</p>
           </div>
           <div>
             <div style={{ fontSize: 12.5, fontWeight: 700, color: "var(--qm-ink)", marginBottom: 12 }}>الخدمات</div>
@@ -28,7 +28,7 @@ export function Footer() {
               <a className="hv-text-primary" href="#work" style={{ fontSize: 13.5, color: "var(--qm-subtle)" }}>أعمالنا</a>
               <a className="hv-text-primary" href="#process" style={{ fontSize: 13.5, color: "var(--qm-subtle)" }}>كيف نعمل</a>
               <a className="hv-text-primary" href="#faq" style={{ fontSize: 13.5, color: "var(--qm-subtle)" }}>الأسئلة الشائعة</a>
-              <a className="hv-text-primary" href="#brief" style={{ fontSize: 13.5, color: "var(--qm-subtle)" }}>اطلب عرضًا</a>
+              <a className="hv-text-primary" href="#brief" style={{ fontSize: 13.5, color: "var(--qm-subtle)" }}>اطلب عرض سعر</a>
             </div>
           </div>
           <div>
