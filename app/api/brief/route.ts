@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { BUDGET_OPTIONS, MESSAGES, TIMELINE_OPTIONS, labelOf, toBrief, validateBrief, type Brief } from "@/lib/brief";
+import { MESSAGES, TIMELINE_OPTIONS, groupDigits, labelOf, toBrief, validateBrief, type Brief } from "@/lib/brief";
 
 /*
  * Receives the project-brief form and forwards it. Configure at least one channel
@@ -23,7 +23,7 @@ function formatBrief(b: Brief) {
     `البريد: ${b.email}`,
     `الجوال / واتساب: ${b.phone || "—"}`,
     `الشركة / الجهة: ${b.company || "—"}`,
-    `الميزانية: ${labelOf(BUDGET_OPTIONS, b.budget)}`,
+    `الميزانية: ${b.budget ? `${groupDigits(b.budget)} ريال` : "—"}`,
     `الجدول الزمني: ${labelOf(TIMELINE_OPTIONS, b.timeline)}`,
     "",
     "وصف المشروع:",
