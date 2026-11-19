@@ -17,6 +17,9 @@ export function Footer() {
               <a className="hv-text-primary" href="#services" style={{ fontSize: 13.5, color: "var(--qm-subtle)" }}>تطبيقات الجوال</a>
               <a className="hv-text-primary" href="#services" style={{ fontSize: 13.5, color: "var(--qm-subtle)" }}>منصات SaaS</a>
               <a className="hv-text-primary" href="#services" style={{ fontSize: 13.5, color: "var(--qm-subtle)" }}>الذكاء الاصطناعي</a>
+              <a className="hv-text-primary" href="#services" style={{ fontSize: 13.5, color: "var(--qm-subtle)" }}>حلول المطاعم والمقاهي</a>
+              <a className="hv-text-primary" href="#services" style={{ fontSize: 13.5, color: "var(--qm-subtle)" }}>عقود التشغيل والدعم</a>
+              <a className="hv-text-primary" href="#services" style={{ fontSize: 13.5, color: "var(--qm-subtle)" }}>التدريب على أدوات الذكاء الاصطناعي</a>
             </div>
           </div>
           <div>
@@ -30,7 +33,8 @@ export function Footer() {
           </div>
           <div>
             <div style={{ fontSize: 12.5, fontWeight: 700, color: "var(--qm-ink)", marginBottom: 12 }}>تواصل</div>
-            <div style={{ display: "flex", flexDirection: "column", gap: 9, fontSize: 13.5, color: "var(--qm-subtle)" }}>
+            {/* flex-start keeps the LTR email/number on the column's (right-hand) start edge instead of stretching and left-aligning. */}
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 9, fontSize: 13.5, color: "var(--qm-subtle)" }}>
               <span dir="ltr">{site.email}</span>
               <span dir="ltr">{site.whatsapp}</span>
               <span>{site.location}</span>

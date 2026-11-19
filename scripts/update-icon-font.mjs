@@ -11,14 +11,15 @@ import { writeFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 
 const ICONS = [
-  "add", "approval", "arrow_back", "arrow_downward", "arrow_upward", "bolt",
+  "add", "arrow_back", "arrow_downward", "arrow_upward", "bolt",
   "calendar_month", "call", "check_circle", "checklist", "cloud", "contactless",
   "description", "design_services", "download", "edit", "error", "flag",
-  "folder_special", "format_quote", "group", "language", "link", "lock", "mail",
-  "more_horiz", "notifications", "person_add", "qr_code_2", "radio_button_unchecked",
-  "remove", "rocket_launch", "schedule", "search", "send", "settings", "smart_toy",
-  "smartphone", "space_dashboard", "storefront", "support_agent", "two_wheeler",
-  "view_kanban", "workspace_premium",
+  "folder_special", "format_quote", "group", "language", "link", "local_cafe",
+  "lock", "loyalty", "mail", "more_horiz", "notifications", "person_add",
+  "point_of_sale", "qr_code_2", "radio_button_unchecked", "redeem", "remove",
+  "restaurant", "rocket_launch", "schedule", "school", "search", "send", "settings",
+  "smart_toy", "smartphone", "space_dashboard", "storefront", "support_agent",
+  "two_wheeler", "view_kanban", "workspace_premium",
 ];
 
 // Optical size follows the font size (20–48); weight 400, no fill, no grade.

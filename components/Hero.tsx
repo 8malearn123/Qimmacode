@@ -4,30 +4,14 @@ export function Hero() {
   return (
     <section id="top" style={{ padding: "clamp(28px,4vw,44px) 0 clamp(40px,5vw,64px)" }}>
       <div style={{ maxWidth: 1180, margin: "0 auto", padding: "0 clamp(16px,3vw,30px)", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center" }}>
-        <h1 style={{ margin: "0 0 16px", fontSize: "clamp(36px,5.2vw,64px)", fontWeight: 700, lineHeight: 1.24, letterSpacing: -0.7, maxWidth: 880 }}>
+        <h1 style={{ margin: "0 0 clamp(22px,2.6vw,32px)", fontSize: "clamp(36px,5.2vw,64px)", fontWeight: 700, lineHeight: 1.24, letterSpacing: -0.7, maxWidth: 880 }}>
           من فكرة على ورق
           <br />
           إلى
           {" "}
           <span style={{ backgroundImage: "linear-gradient(90deg,var(--qm-teal-tint),var(--qm-teal-tint))", backgroundRepeat: "no-repeat", backgroundPosition: "right center", backgroundSize: "0% 100%", borderRadius: 12, padding: "1px 10px", animation: "qmMark .9s cubic-bezier(.22,.61,.36,1) .5s forwards" }}>منتج يستخدمه الآلاف.</span>
         </h1>
-        <p style={{ margin: "0 0 26px", fontSize: "clamp(16px,1.4vw,18px)", lineHeight: 1.75, color: "var(--qm-subtle)", maxWidth: 620 }}>
-          نبني
-          {" "}
-          <span style={{ display: "inline-block", height: "1.75em", overflow: "hidden", verticalAlign: "top" }}>
-            <span style={{ display: "block", animation: "qmWords 12s cubic-bezier(.22,.61,.36,1) infinite" }}>
-              <span style={{ display: "block", height: "1.75em", color: "var(--qm-teal-deep)", fontWeight: 700 }}>تطبيقات الويب</span>
-              <span style={{ display: "block", height: "1.75em", color: "var(--qm-teal-deep)", fontWeight: 700 }}>تطبيقات الجوال</span>
-              <span style={{ display: "block", height: "1.75em", color: "var(--qm-teal-deep)", fontWeight: 700 }}>منصات SaaS</span>
-              <span style={{ display: "block", height: "1.75em", color: "var(--qm-teal-deep)", fontWeight: 700 }}>لوحات التحكم</span>
-              <span style={{ display: "block", height: "1.75em", color: "var(--qm-teal-deep)", fontWeight: 700 }}>حلول الذكاء الاصطناعي</span>
-              <span style={{ display: "block", height: "1.75em", color: "var(--qm-teal-deep)", fontWeight: 700 }}>تطبيقات الويب</span>
-            </span>
-          </span>
-          {" "}
-          — عربي أولًا، وإصدار كل أسبوع تجرّبه بنفسك.
-        </p>
-        <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 12, marginBottom: 16 }}>
+        <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 12, marginBottom: "clamp(28px,3.6vw,48px)" }}>
           {/* 52px rows around 42px buttons — reproduces the spacing of the approved design. */}
           <div style={{ height: 52 }}>
             <Button icon="rocket_launch" href="#brief">اطلب عرضًا لمشروعك</Button>
@@ -35,20 +19,6 @@ export function Hero() {
           <div style={{ height: 52 }}>
             <Button variant="ghost" icon="folder_special" href="#work">شاهد أعمالنا</Button>
           </div>
-        </div>
-        <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", alignItems: "center", gap: 18, fontSize: 13, color: "var(--qm-muted)", marginBottom: 36 }}>
-          <span style={{ display: "inline-flex", alignItems: "center", gap: 6 }}>
-            <span className="msr" aria-hidden="true" style={{ fontSize: 18, color: "var(--qm-teal-deep)" }}>check_circle</span>
-            أول استشارة مجانية
-          </span>
-          <span style={{ display: "inline-flex", alignItems: "center", gap: 6 }}>
-            <span className="msr" aria-hidden="true" style={{ fontSize: 18, color: "var(--qm-teal-deep)" }}>schedule</span>
-            نرد خلال 24 ساعة
-          </span>
-          <span style={{ display: "inline-flex", alignItems: "center", gap: 6 }}>
-            <span className="msr" aria-hidden="true" style={{ fontSize: 18, color: "var(--qm-teal-deep)" }}>workspace_premium</span>
-            الكود ملكك بالكامل
-          </span>
         </div>
         <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "center", width: "100%" }}>
           <div data-rsp="fan-side" style={{ width: "min(280px,26vw)", minWidth: 170, transform: "rotate(-5deg) translateY(14px)", marginInlineEnd: -34, position: "relative", zIndex: 1, background: "var(--qm-surface)", border: "1px solid var(--qm-border)", borderRadius: 20, boxShadow: "var(--qm-shadow-card)", padding: "16px 16px 14px" }}>
@@ -80,7 +50,7 @@ export function Hero() {
               </span>
               <span style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "var(--qm-surface)", border: "1px solid var(--qm-hairline)", borderRadius: 999, padding: "4px 12px" }}>
                 <span className="msr" aria-hidden="true" style={{ fontSize: 12, color: "var(--qm-faint)" }}>lock</span>
-                <span style={{ fontFamily: "var(--qm-font-mono)", fontSize: 10.5, color: "var(--qm-muted)", letterSpacing: 0.3 }} dir="ltr">qimma.code</span>
+                <span style={{ fontFamily: "var(--qm-font-mono)", fontSize: 10.5, color: "var(--qm-muted)", letterSpacing: 0.3 }} dir="ltr">qimmacode.sa</span>
               </span>
             </div>
             <div aria-hidden="true" style={{ height: "clamp(200px,24vw,300px)", background: "var(--qm-surface-soft)", display: "flex", overflow: "hidden" }}>

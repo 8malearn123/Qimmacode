@@ -1,10 +1,36 @@
+const RESTAURANT_FEATURES = [
+  { icon: "qr_code_2", title: "منيو رقمي وطلب من الطاولة", text: "يمسح العميل الباركود ويطلب، فيصل طلبه للكاشير والمطبخ فورًا." },
+  { icon: "smartphone", title: "تطبيق وموقع طلبات باسمك", text: "استلام أو توصيل مباشر، بلا عمولة تطبيقات التوصيل." },
+  { icon: "loyalty", title: "برنامج ولاء ونقاط", text: "أختام رقمية ونقاط وعروض تعيد عميلك مرة بعد مرة." },
+  { icon: "point_of_sale", title: "ربط الكاشير وتطبيقات التوصيل", text: "كل الطلبات والمبيعات وتقاريرها في لوحة واحدة." },
+];
+
+const TICKET_ITEMS = [
+  { qty: "٢×", name: "لاتيه مثلّج", price: "٣٢ ر.س" },
+  { qty: "١×", name: "كرواسون زعتر", price: "١٤ ر.س" },
+  { qty: "١×", name: "مياه", price: "٣ ر.س" },
+];
+
+const TRAINING_SESSIONS = [
+  { title: "كتابة الأوامر بوضوح", length: "٤٥ دقيقة" },
+  { title: "تلخيص الملفات وتحليلها", length: "ساعة" },
+  { title: "أتمتة المهام المتكررة", length: "ساعة ونصف" },
+];
+
+const TRAINEES = [
+  { initial: "م", color: "var(--qm-avatar-1)" },
+  { initial: "ر", color: "var(--qm-avatar-2)" },
+  { initial: "ن", color: "var(--qm-avatar-7)" },
+  { initial: "ع", color: "var(--qm-avatar-3)" },
+];
+
 export function Services() {
   return (
     <section id="services" style={{ scrollMarginTop: 92, padding: "clamp(48px,6vw,86px) 0" }} data-reveal="1">
       <div style={{ maxWidth: 1180, margin: "0 auto", padding: "0 clamp(16px,3vw,30px)" }}>
         <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 13, marginBottom: 34, maxWidth: 660 }}>
-          <h2 style={{ margin: 0, fontSize: "clamp(26px,3.2vw,38px)", fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.3 }}>كل ما يحتاجه منتجك</h2>
-          <p style={{ margin: 0, fontSize: 16, lineHeight: 1.7, color: "var(--qm-subtle)" }}>فريق واحد يتولى التصميم والتطوير والإطلاق، فلا تضيع الفكرة بين أكثر من جهة.</p>
+          <h2 style={{ margin: 0, fontSize: "clamp(26px,3.2vw,38px)", fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.3 }}>كل ما يحتاجه مشروعك</h2>
+          <p style={{ margin: 0, fontSize: 16, lineHeight: 1.7, color: "var(--qm-subtle)" }}>فريق واحد يتولى التصميم والتطوير والإطلاق والتشغيل، فلا تضيع الفكرة بين أكثر من جهة.</p>
         </div>
         <div style={{ display: "flex", flexWrap: "wrap", gap: 18 }}>
           <div className="hv-lift-shadow" style={{ flex: "1.6 1 560px", minWidth: 0, background: "var(--qm-surface)", border: "1px solid var(--qm-border)", borderRadius: 24, boxShadow: "var(--qm-shadow-card)", padding: 26, display: "flex", flexWrap: "wrap", alignItems: "stretch", gap: 24, transition: "transform var(--qm-dur-fast),box-shadow var(--qm-dur-fast)" }}>
@@ -230,6 +256,185 @@ export function Services() {
                   <span style={{ width: 24, height: 24, borderRadius: "50%", background: "var(--qm-violet)", color: "#fff", fontSize: 11, fontWeight: 600, display: "flex", alignItems: "center", justifyContent: "center" }}>س</span>
                 </div>
                 <span style={{ fontSize: 10.5, color: "var(--qm-faint)" }}>مكوّنات جاهزة</span>
+              </div>
+            </div>
+          </div>
+          <div className="hv-lift-shadow" style={{ flex: "1 1 100%", minWidth: 0, background: "var(--qm-surface)", border: "1px solid var(--qm-border)", borderRadius: 24, boxShadow: "var(--qm-shadow-card)", padding: 26, display: "flex", flexWrap: "wrap", alignItems: "center", gap: 24, transition: "transform var(--qm-dur-fast),box-shadow var(--qm-dur-fast)" }}>
+            <div style={{ flex: "1 1 300px", minWidth: 0, display: "flex", flexDirection: "column", gap: 11 }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 11 }}>
+                <span style={{ width: 38, height: 38, borderRadius: 12, background: "var(--qm-orange-tint)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                  <span className="msr" aria-hidden="true" style={{ fontSize: 21, color: "var(--qm-orange-deep)" }}>restaurant</span>
+                </span>
+                <h3 style={{ margin: 0, fontSize: 17, fontWeight: 700 }}>حلول المطاعم والمقاهي</h3>
+              </div>
+              <p style={{ margin: 0, fontSize: 14, lineHeight: 1.75, color: "var(--qm-subtle)" }}>كل ما يحتاجه مطعمك أو مقهاك رقميًا، وتحت اسمك أنت: من طلب الطاولة إلى تقرير آخر اليوم.</p>
+              <ul style={{ listStyle: "none", margin: "6px 0 0", padding: 0, display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(max(210px,calc(50% - 9px)),1fr))", gap: "14px 18px" }}>
+                {RESTAURANT_FEATURES.map((f) => (
+                  <li key={f.title} style={{ display: "flex", alignItems: "flex-start", gap: 10, minWidth: 0 }}>
+                    <span style={{ width: 30, height: 30, borderRadius: 9, background: "var(--qm-surface-soft)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                      <span className="msr" aria-hidden="true" style={{ fontSize: 17, color: "var(--qm-orange-deep)" }}>{f.icon}</span>
+                    </span>
+                    <span style={{ display: "flex", flexDirection: "column", gap: 2, minWidth: 0 }}>
+                      <span style={{ fontSize: 13.5, fontWeight: 700, color: "var(--qm-ink)" }}>{f.title}</span>
+                      <span style={{ fontSize: 12.5, lineHeight: 1.7, color: "var(--qm-subtle)" }}>{f.text}</span>
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div aria-hidden="true" data-rsp="svc-vis-c" style={{ flex: "1.15 1 400px", minWidth: 0, alignSelf: "stretch", background: "var(--qm-surface-row)", border: "1px solid var(--qm-hairline)", borderRadius: 16, padding: 16, display: "flex", flexWrap: "wrap", alignItems: "center", alignContent: "center", gap: 12 }}>
+              <div style={{ flex: "1.15 1 220px", minWidth: 0, background: "var(--qm-surface)", border: "1px solid var(--qm-hairline)", borderRadius: 14, boxShadow: "var(--qm-shadow-card)", padding: "12px 14px", display: "flex", flexDirection: "column", gap: 8 }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 9 }}>
+                  <span style={{ width: 30, height: 30, borderRadius: 9, background: "var(--qm-orange-tint)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                    <span className="msr" aria-hidden="true" style={{ fontSize: 17, color: "var(--qm-orange-deep)" }}>qr_code_2</span>
+                  </span>
+                  <span style={{ display: "flex", flexDirection: "column", minWidth: 0 }}>
+                    <span style={{ fontSize: 12.5, fontWeight: 700, color: "var(--qm-ink)" }}>طاولة ٤</span>
+                    <span style={{ fontSize: 10, color: "var(--qm-muted)", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>طلب ١٢٨ من المنيو الرقمي</span>
+                  </span>
+                  <span style={{ position: "relative", marginInlineStart: "auto", width: 64, height: 19, flexShrink: 0 }}>
+                    <span style={{ position: "absolute", inset: 0, display: "inline-flex", alignItems: "center", justifyContent: "center", borderRadius: 999, background: "var(--qm-orange-tint)", color: "var(--qm-orange-deep)", fontSize: 10, fontWeight: 700, animation: "qmKitA 9s linear infinite" }}>طلب جديد</span>
+                    <span style={{ position: "absolute", inset: 0, display: "inline-flex", alignItems: "center", justifyContent: "center", borderRadius: 999, background: "var(--qm-teal-tint)", color: "var(--qm-teal-deep)", fontSize: 10, fontWeight: 700, animation: "qmKitB 9s linear infinite" }}>في المطبخ</span>
+                  </span>
+                </div>
+                <span style={{ borderTop: "1px dashed var(--qm-border-ghost)" }} />
+                <div style={{ display: "flex", flexDirection: "column", gap: 8, animation: "qmVeil 9s linear infinite" }}>
+                  {TICKET_ITEMS.map((item, i) => (
+                    <div key={item.name} style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 11.5, animation: `qmBld${i + 1} 9s cubic-bezier(.22,.61,.36,1) infinite` }}>
+                      <span style={{ width: 18, flexShrink: 0, fontWeight: 600, color: "var(--qm-muted)" }}>{item.qty}</span>
+                      <span style={{ flex: 1, minWidth: 0, color: "var(--qm-ink)", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{item.name}</span>
+                      <span style={{ flexShrink: 0, color: "var(--qm-subtle)" }}>{item.price}</span>
+                    </div>
+                  ))}
+                  <div style={{ display: "flex", flexDirection: "column", gap: 8, animation: "qmBld4 9s cubic-bezier(.22,.61,.36,1) infinite" }}>
+                    <span style={{ borderTop: "1px dashed var(--qm-border-ghost)" }} />
+                    <div style={{ display: "flex", alignItems: "center", fontSize: 12, fontWeight: 700, color: "var(--qm-ink)" }}>
+                      <span>الإجمالي</span>
+                      <span style={{ marginInlineStart: "auto" }}>٤٩ ر.س</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div style={{ flex: "1 1 180px", minWidth: 0, background: "var(--qm-surface)", border: "1px solid var(--qm-hairline)", borderRadius: 14, boxShadow: "var(--qm-shadow-card)", padding: "12px 14px", display: "flex", flexDirection: "column", gap: 10, animation: "qmFloat 7s ease-in-out infinite" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 7 }}>
+                  <span className="msr" aria-hidden="true" style={{ fontSize: 16, color: "var(--qm-orange-deep)" }}>loyalty</span>
+                  <span style={{ fontSize: 11.5, fontWeight: 700, color: "var(--qm-ink)" }}>بطاقة الولاء</span>
+                  <span style={{ position: "relative", marginInlineStart: "auto", width: 44, height: 16, flexShrink: 0 }}>
+                    <span style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "flex-end", background: "var(--qm-surface)", fontSize: 10.5, fontWeight: 700, color: "var(--qm-muted)", animation: "qmKitA 9s linear infinite" }}>٦ من ٨</span>
+                    <span style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "flex-end", background: "var(--qm-surface)", fontSize: 10.5, fontWeight: 700, color: "var(--qm-teal-deep)", animation: "qmKitB 9s linear infinite" }}>٧ من ٨</span>
+                  </span>
+                </div>
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(4,26px)", justifyContent: "space-between", rowGap: 8 }}>
+                  {Array.from({ length: 6 }, (_, i) => (
+                    <span key={i} style={{ width: 26, height: 26, borderRadius: "50%", background: "var(--qm-teal-tint)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                      <span className="msr" aria-hidden="true" style={{ fontSize: 14, color: "var(--qm-teal-deep)" }}>local_cafe</span>
+                    </span>
+                  ))}
+                  <span style={{ position: "relative", width: 26, height: 26, borderRadius: "50%", border: "1.5px dashed var(--qm-border-ghost)" }}>
+                    <span style={{ position: "absolute", inset: -1.5, borderRadius: "50%", background: "var(--qm-teal-deep)", display: "flex", alignItems: "center", justifyContent: "center", animation: "qmStampIn 9s cubic-bezier(.22,.61,.36,1) infinite" }}>
+                      <span className="msr" aria-hidden="true" style={{ fontSize: 14, color: "#fff" }}>local_cafe</span>
+                    </span>
+                  </span>
+                  <span style={{ width: 26, height: 26, borderRadius: "50%", border: "1.5px dashed var(--qm-orange)", background: "var(--qm-orange-tint)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                    <span className="msr" aria-hidden="true" style={{ fontSize: 14, color: "var(--qm-orange-deep)" }}>redeem</span>
+                  </span>
+                </div>
+                <span style={{ fontSize: 10.5, color: "var(--qm-subtle)" }}>القهوة الثامنة علينا</span>
+              </div>
+            </div>
+          </div>
+          <div className="hv-lift-shadow" style={{ flex: "1 1 420px", minWidth: 0, background: "var(--qm-surface)", border: "1px solid var(--qm-border)", borderRadius: 24, boxShadow: "var(--qm-shadow-card)", padding: 26, display: "flex", flexDirection: "column", gap: 16, transition: "transform var(--qm-dur-fast),box-shadow var(--qm-dur-fast)" }}>
+            <div aria-hidden="true" style={{ height: 176, background: "var(--qm-surface-row)", border: "1px solid var(--qm-hairline)", borderRadius: 16, padding: 14, display: "flex", flexDirection: "column", justifyContent: "center", gap: 8 }}>
+              <div style={{ background: "var(--qm-surface)", border: "1px solid var(--qm-hairline)", borderRadius: 11, padding: "9px 12px", display: "flex", flexDirection: "column", gap: 7 }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                  <span style={{ fontSize: 11, fontWeight: 600, color: "var(--qm-subtle)", flex: 1 }}>حالة أنظمتك</span>
+                  <span style={{ display: "inline-flex", alignItems: "center", gap: 5, fontSize: 10.5, fontWeight: 700, color: "var(--qm-teal-deep)", background: "var(--qm-teal-tint)", padding: "2px 9px", borderRadius: 999 }}>
+                    <span style={{ width: 6, height: 6, borderRadius: "50%", background: "var(--qm-teal-deep)", animation: "qmDot 1.6s ease-in-out infinite" }} />
+                    تعمل
+                  </span>
+                </div>
+                <div style={{ display: "flex", gap: 3, height: 16 }}>
+                  {Array.from({ length: 30 }, (_, i) => (
+                    <span key={i} style={{ flex: 1, borderRadius: 3, background: "var(--qm-teal)", transformOrigin: "bottom center", animation: "qmGrow 9s cubic-bezier(.22,.61,.36,1) infinite", animationDelay: `${(i * 0.04 - 1.2).toFixed(2)}s` }} />
+                  ))}
+                </div>
+                <div style={{ display: "flex", alignItems: "center", fontSize: 10, color: "var(--qm-faint)" }}>
+                  <span>آخر ٣٠ يومًا</span>
+                  <span style={{ marginInlineStart: "auto", fontWeight: 700, color: "var(--qm-teal-deep)" }}>جاهزية ٩٩٫٩٪</span>
+                </div>
+              </div>
+              <div style={{ background: "var(--qm-surface)", border: "1px solid var(--qm-hairline)", borderRadius: 11, padding: "8px 12px 10px", display: "flex", flexDirection: "column", gap: 7 }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                  <span className="msr" aria-hidden="true" style={{ fontSize: 15, color: "var(--qm-primary)" }}>edit</span>
+                  <span style={{ flex: 1, minWidth: 0, fontSize: 11, fontWeight: 600, color: "var(--qm-ink)", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>طلب تعديل: صنف جديد في المنيو</span>
+                  <span style={{ position: "relative", width: 66, height: 19, flexShrink: 0 }}>
+                    <span style={{ position: "absolute", inset: 0, display: "inline-flex", alignItems: "center", justifyContent: "center", borderRadius: 999, background: "var(--qm-orange-tint)", color: "var(--qm-orange-deep)", fontSize: 10, fontWeight: 700, animation: "qmSwapA 9s linear infinite" }}>قيد التنفيذ</span>
+                    <span style={{ position: "absolute", inset: 0, display: "inline-flex", alignItems: "center", justifyContent: "center", borderRadius: 999, background: "var(--qm-teal-tint)", color: "var(--qm-teal-deep)", fontSize: 10, fontWeight: 700, animation: "qmSwapB 9s linear infinite" }}>تم</span>
+                  </span>
+                </div>
+                <span style={{ display: "block", height: 5, borderRadius: 999, background: "var(--qm-surface-soft)", overflow: "hidden" }}>
+                  <span style={{ display: "block", height: "100%", borderRadius: 999, background: "linear-gradient(90deg,#58b3b3,#6b5fa0)", transformOrigin: "right center", animation: "qmFill 9s cubic-bezier(.22,.61,.36,1) infinite" }} />
+                </span>
+              </div>
+            </div>
+            <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 11 }}>
+                <span style={{ width: 38, height: 38, borderRadius: 12, background: "var(--qm-teal-tint)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                  <span className="msr" aria-hidden="true" style={{ fontSize: 21, color: "var(--qm-teal-deep)" }}>support_agent</span>
+                </span>
+                <h3 style={{ margin: 0, fontSize: 17, fontWeight: 700 }}>عقود التشغيل والدعم</h3>
+              </div>
+              <p style={{ margin: 0, fontSize: 14, lineHeight: 1.75, color: "var(--qm-subtle)" }}>بعد الإطلاق لا نختفي: نستضيف نظامك ونراقبه ونصونه ونطوّره باشتراك شهري أو سنوي — للمطاعم والمقاهي والشركات.</p>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+                <span style={{ fontSize: 11.5, fontWeight: 600, color: "var(--qm-subtle-2)", background: "var(--qm-surface-soft)", padding: "4px 10px", borderRadius: 999 }}>استضافة ومراقبة</span>
+                <span style={{ fontSize: 11.5, fontWeight: 600, color: "var(--qm-subtle-2)", background: "var(--qm-surface-soft)", padding: "4px 10px", borderRadius: 999 }}>صيانة وتحديثات</span>
+                <span style={{ fontSize: 11.5, fontWeight: 600, color: "var(--qm-subtle-2)", background: "var(--qm-surface-soft)", padding: "4px 10px", borderRadius: 999 }}>دعم فني</span>
+              </div>
+            </div>
+          </div>
+          <div className="hv-lift-shadow" style={{ flex: "1 1 420px", minWidth: 0, background: "var(--qm-surface)", border: "1px solid var(--qm-border)", borderRadius: 24, boxShadow: "var(--qm-shadow-card)", padding: 26, display: "flex", flexDirection: "column", gap: 16, transition: "transform var(--qm-dur-fast),box-shadow var(--qm-dur-fast)" }}>
+            <div aria-hidden="true" style={{ height: 176, background: "var(--qm-surface-row)", border: "1px solid var(--qm-hairline)", borderRadius: 16, padding: "14px 14px 20px", display: "flex", flexDirection: "column", justifyContent: "center" }}>
+              <div style={{ position: "relative", background: "var(--qm-surface)", border: "1px solid var(--qm-hairline)", borderRadius: 11, padding: "10px 12px 22px", display: "flex", flexDirection: "column", gap: 8 }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                  <span style={{ display: "flex", flexShrink: 0 }}>
+                    {TRAINEES.map((t, i) => (
+                      <span key={t.initial} style={{ width: 22, height: 22, borderRadius: "50%", background: t.color, border: "2px solid var(--qm-surface)", marginInlineStart: i ? -7 : 0, color: "#fff", fontSize: 9.5, fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center", animation: "qmWave 3.6s ease-in-out infinite", animationDelay: `${i * 0.14}s` }}>{t.initial}</span>
+                    ))}
+                  </span>
+                  <span style={{ fontSize: 10.5, fontWeight: 600, color: "var(--qm-subtle)", whiteSpace: "nowrap" }}>١٢ مشاركًا</span>
+                  <span style={{ position: "relative", marginInlineStart: "auto", width: 84, height: 19, flexShrink: 0 }}>
+                    <span style={{ position: "absolute", inset: 0, display: "inline-flex", alignItems: "center", justifyContent: "center", borderRadius: 999, background: "var(--qm-primary-tint)", color: "var(--qm-primary)", fontSize: 10, fontWeight: 700, animation: "qmSwapA 9s linear infinite" }}>ورشة للشركات</span>
+                    <span style={{ position: "absolute", inset: 0, display: "inline-flex", alignItems: "center", justifyContent: "center", borderRadius: 999, background: "var(--qm-teal-tint)", color: "var(--qm-teal-deep)", fontSize: 10, fontWeight: 700, animation: "qmSwapB 9s linear infinite" }}>دورة للأفراد</span>
+                  </span>
+                </div>
+                {TRAINING_SESSIONS.map((session, i) => (
+                  <div key={session.title} style={{ display: "flex", alignItems: "center", gap: 7 }}>
+                    <span style={{ position: "relative", width: 15, height: 15, flexShrink: 0 }}>
+                      <span className="msr" aria-hidden="true" style={{ position: "absolute", inset: 0, fontSize: 15, color: "var(--qm-faint)" }}>radio_button_unchecked</span>
+                      <span className="msr" aria-hidden="true" style={{ position: "absolute", inset: 0, fontSize: 15, color: "var(--qm-teal-deep)", background: "var(--qm-surface)", borderRadius: "50%", animation: `qmTick${i + 1} 9s cubic-bezier(.22,.61,.36,1) infinite` }}>check_circle</span>
+                    </span>
+                    <span style={{ flex: 1, minWidth: 0, fontSize: 11, fontWeight: 600, color: "var(--qm-ink)", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{session.title}</span>
+                    <span style={{ flexShrink: 0, fontSize: 10, color: "var(--qm-faint)" }}>{session.length}</span>
+                  </div>
+                ))}
+                <div style={{ position: "absolute", bottom: -12, insetInlineEnd: 12, display: "inline-flex", alignItems: "center", gap: 5, background: "var(--qm-surface)", border: "1px solid var(--qm-border)", borderRadius: 999, boxShadow: "var(--qm-shadow-card)", padding: "4px 10px", animation: "qmToastB 9s cubic-bezier(.22,.61,.36,1) infinite" }}>
+                  <span className="msr" aria-hidden="true" style={{ fontSize: 13, color: "var(--qm-primary)" }}>workspace_premium</span>
+                  <span style={{ fontSize: 10, fontWeight: 700, color: "var(--qm-subtle)", whiteSpace: "nowrap" }}>شهادة إتمام</span>
+                </div>
+              </div>
+            </div>
+            <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 11 }}>
+                <span style={{ width: 38, height: 38, borderRadius: 12, background: "var(--qm-primary-tint)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                  <span className="msr" aria-hidden="true" style={{ fontSize: 21, color: "var(--qm-primary)" }}>school</span>
+                </span>
+                <h3 style={{ margin: 0, fontSize: 17, fontWeight: 700 }}>التدريب على أدوات الذكاء الاصطناعي</h3>
+              </div>
+              <p style={{ margin: 0, fontSize: 14, lineHeight: 1.75, color: "var(--qm-subtle)" }}>ورش عملية لفرق الشركات ودورات للأفراد، نتدرّب فيها على أدوات الذكاء الاصطناعي بمهام من واقع العمل — فتخرج بمهارة تستخدمها من الغد.</p>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+                <span style={{ fontSize: 11.5, fontWeight: 600, color: "var(--qm-subtle-2)", background: "var(--qm-surface-soft)", padding: "4px 10px", borderRadius: 999 }}>ورش للشركات</span>
+                <span style={{ fontSize: 11.5, fontWeight: 600, color: "var(--qm-subtle-2)", background: "var(--qm-surface-soft)", padding: "4px 10px", borderRadius: 999 }}>دورات للأفراد</span>
+                <span style={{ fontSize: 11.5, fontWeight: 600, color: "var(--qm-subtle-2)", background: "var(--qm-surface-soft)", padding: "4px 10px", borderRadius: 999 }}>تطبيق عملي</span>
               </div>
             </div>
           </div>

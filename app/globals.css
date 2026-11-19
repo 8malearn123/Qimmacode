@@ -52,7 +52,6 @@ p { text-wrap: pretty; }
 @keyframes qmTrack { 0%, 40%, 100% { background-color: var(--qm-teal-deep); } 50%, 90% { background-color: #d8d3ca; } }
 @keyframes qmWave { 0%, 100% { transform: translateY(0); } 18% { transform: translateY(-4px); } 36% { transform: translateY(0); } }
 @keyframes qmQ { 0%, 100% { opacity: .3; } 22% { opacity: 1; } 44% { opacity: .3; } }
-@keyframes qmWords { 0%, 17% { transform: translateY(0); } 20%, 37% { transform: translateY(-1.75em); } 40%, 57% { transform: translateY(-3.5em); } 60%, 77% { transform: translateY(-5.25em); } 80%, 97% { transform: translateY(-7em); } 100% { transform: translateY(-8.75em); } }
 @keyframes qmSwapA { 0%, 42% { opacity: 1; } 50%, 92% { opacity: 0; } 100% { opacity: 1; } }
 @keyframes qmSwapB { 0%, 42% { opacity: 0; } 50%, 92% { opacity: 1; } 100% { opacity: 0; } }
 @keyframes qmMark { from { background-size: 0% 100%; } to { background-size: 100% 100%; } }
@@ -76,7 +75,14 @@ p { text-wrap: pretty; }
 @keyframes qmNfcSheet { 0%, 25% { transform: translateY(112%); } 34%, 78% { transform: translateY(0); } 88%, 100% { transform: translateY(112%); } }
 @keyframes qmNfcToast { 0%, 38% { opacity: 0; transform: translateY(-7px) scale(.92); } 46%, 76% { opacity: 1; transform: none; } 84%, 100% { opacity: 0; transform: translateY(-7px) scale(.92); } }
 @keyframes qmMarquee { from { transform: translateX(0); } to { transform: translateX(50%); } }
-@keyframes qmStamp { 0%, 30% { opacity: 0; transform: rotate(-9deg) scale(1.9); } 38%, 93% { opacity: 1; transform: rotate(-9deg) scale(1); } 100% { opacity: 0; transform: rotate(-9deg) scale(1); } }
+/* Restaurants & training service cards (9s loops): the order goes to the kitchen and earns a stamp
+   once its ticket is complete (qmBld1–4); training sessions get ticked one after another. */
+@keyframes qmKitA { 0%, 62% { opacity: 1; } 67%, 93% { opacity: 0; } 98%, 100% { opacity: 1; } }
+@keyframes qmKitB { 0%, 62% { opacity: 0; } 67%, 93% { opacity: 1; } 98%, 100% { opacity: 0; } }
+@keyframes qmStampIn { 0%, 64% { opacity: 0; transform: rotate(-9deg) scale(1.9); } 71%, 93% { opacity: 1; transform: rotate(-9deg) scale(1); } 98%, 100% { opacity: 0; transform: rotate(-9deg) scale(1); } }
+@keyframes qmTick1 { 0%, 14% { opacity: 0; transform: scale(.6); } 18%, 93% { opacity: 1; transform: none; } 98%, 100% { opacity: 0; transform: none; } }
+@keyframes qmTick2 { 0%, 32% { opacity: 0; transform: scale(.6); } 36%, 93% { opacity: 1; transform: none; } 98%, 100% { opacity: 0; transform: none; } }
+@keyframes qmTick3 { 0%, 50% { opacity: 0; transform: scale(.6); } 54%, 93% { opacity: 1; transform: none; } 98%, 100% { opacity: 0; transform: none; } }
 
 @media (prefers-reduced-motion: reduce) { * { animation-duration: .01s !important; animation-iteration-count: 1 !important; } }
 
@@ -101,6 +107,9 @@ html::-webkit-scrollbar, body::-webkit-scrollbar { width: 0; height: 0; display:
 }
 @media (max-width: 790px) {
   [data-rsp="svc-vis-b"] { order: -1; }
+}
+@media (max-width: 825px) {
+  [data-rsp="svc-vis-c"] { order: -1; }
 }
 @media (max-width: 640px) {
   [data-rsp="tab"][data-on="0"] { display: none !important; }
