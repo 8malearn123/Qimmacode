@@ -27,10 +27,6 @@ export function Testimonials() {
                 <div style={{ fontSize: 13.5, fontWeight: 700 }}>عبدالله الحارثي</div>
                 <div style={{ fontSize: 12, color: "var(--qm-muted)" }}>مؤسس، منصة ناشئة</div>
               </div>
-              <ProjectLink index={0} className="hv-bg-primary-tint qm-focus" style={{ display: "inline-flex", alignItems: "center", gap: 7, background: "var(--qm-surface-soft)", border: "1px solid var(--qm-hairline)", borderRadius: 999, padding: "7px 14px", fontSize: 12, fontWeight: 600, color: "var(--qm-subtle)", cursor: "pointer", marginInlineStart: "auto", transition: "background var(--qm-dur-fast)" }}>
-                <span className="msr" aria-hidden="true" style={{ fontSize: 15, color: "var(--qm-primary)" }}>arrow_back</span>
-                شاهد مشروعه: منصة إدارة مشاريع
-              </ProjectLink>
             </div>
           </div>
           <div style={{ flex: "1 1 300px", minWidth: 0, display: "flex", flexDirection: "column", gap: 18 }}>

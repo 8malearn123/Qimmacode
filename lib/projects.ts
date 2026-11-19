@@ -1,11 +1,10 @@
 /**
- * Projects shown in the "مشاريع أُطلقت فعلًا" (work) section.
+ * Projects shown in the "مشاريع أُطلقت فعلًا" (work) section, in display order.
  *
- * Screenshots are optional. Drop images into public/projects/ and reference them
- * here, e.g. `screens: ["/projects/pm-desktop.png"]`. Desktop projects use one
- * image (shown in a browser frame, ~16:9); phone projects use two (shown in two
- * phone frames, ~9:17). Without screenshots a built-in illustrated preview is
- * shown instead.
+ * Screenshots live in public/projects/. Desktop projects use one 16:9 image
+ * (shown in a browser frame; capture the live site at 1440×810 @2x and save it
+ * as WebP at 1920×1080); phone projects use two (shown in two phone frames,
+ * ~9:17). Without screenshots the illustrated `preview` is shown instead.
  */
 export type ProjectMetric = { v: string; l: string };
 
@@ -14,11 +13,14 @@ export type Project = {
   num: string;
   name: string;
   tag: string;
+  /** Address shown in the browser frame. */
   url: string;
+  /** Link to the live product; opened by the front card and a «زيارة الموقع» button next to the metrics. */
+  href?: string;
   meta: string;
   device: "desktop" | "phone";
-  /** Which illustrated preview to show when there are no screenshots. */
-  preview: "pm" | "delivery" | "analytics" | "assistant";
+  /** Illustrated stand-in, used only when the project has no `screens`. */
+  preview?: "pm" | "delivery" | "analytics" | "assistant";
   metrics: ProjectMetric[];
   screens?: string[];
 };
@@ -26,17 +28,20 @@ export type Project = {
 export const PROJECTS: Project[] = [
   {
     num: "٠١",
-    name: "منصة إدارة مشاريع",
-    tag: "SaaS · ويب",
-    url: "pm.qimma.demo",
-    meta: "٨ أسابيع · ٢٠٢٥",
+    name: "منصة قِمّة التعليمية",
+    tag: "تعليم إلكتروني · ويب",
+    url: "8ma.sa",
+    href: "https://www.8ma.sa/",
+    meta: "يعمل الآن",
     device: "desktop",
-    preview: "pm",
+    // From the live catalogue (8ma.sa/in-person-courses), Nov 2026: 55 course
+    // explanations across 6 universities + 2 colleges; 4.93 average over the 12 rated ones.
     metrics: [
-      { v: "8 أسابيع", l: "من الفكرة للإطلاق" },
-      { v: "3x", l: "سرعة إنجاز الفريق" },
-      { v: "99.9%", l: "جهوزية الخدمة" },
+      { v: "55", l: "شرحًا جامعيًا" },
+      { v: "8", l: "جامعات وكليات" },
+      { v: "4.9", l: "تقييم الطلاب" },
     ],
+    screens: ["/projects/8ma.webp"],
   },
   {
     num: "٠٢",
