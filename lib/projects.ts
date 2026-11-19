@@ -1,5 +1,5 @@
 /**
- * Projects shown in the "مشاريع أُطلقت فعلًا" (work) section, in display order.
+ * Projects shown in the "من أعمالنا" (work) section, in display order.
  *
  * Screenshots live in public/projects/. Desktop projects use one 16:9 image
  * (shown in a browser frame; capture the live site at 1440×810 @2x and save it
@@ -82,7 +82,7 @@ export const PROJECTS: Project[] = [
     metrics: [
       { v: "70%", l: "ردود آلية" },
       { v: "24/7", l: "استجابة" },
-      { v: "عربي", l: "فهم أصلي للهجات" },
+      { v: "عربي", l: "يفهم اللهجات المحلية" },
     ],
   },
 ];

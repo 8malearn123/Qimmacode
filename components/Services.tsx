@@ -1,12 +1,12 @@
 const RESTAURANT_FEATURES = [
-  { icon: "qr_code_2", title: "منيو رقمي وطلب من الطاولة", text: "يمسح العميل الباركود ويطلب، فيصل طلبه للكاشير والمطبخ فورًا." },
-  { icon: "smartphone", title: "تطبيق وموقع طلبات باسمك", text: "استلام أو توصيل مباشر، بلا عمولة تطبيقات التوصيل." },
-  { icon: "loyalty", title: "برنامج ولاء ونقاط", text: "أختام رقمية ونقاط وعروض تعيد عميلك مرة بعد مرة." },
+  { icon: "qr_code_2", title: "منيو رقمي وطلب من الطاولة", text: "العميل يمسح الباركود ويطلب، وطلبه يصل للكاشير والمطبخ مباشرة." },
+  { icon: "smartphone", title: "تطبيق وموقع طلبات باسمك", text: "استلام من الفرع أو توصيل، وبدون عمولة تطبيقات التوصيل." },
+  { icon: "loyalty", title: "برنامج ولاء ونقاط", text: "أختام رقمية ونقاط وعروض ترجّع عميلك مرة بعد مرة." },
   { icon: "point_of_sale", title: "ربط الكاشير وتطبيقات التوصيل", text: "كل الطلبات والمبيعات وتقاريرها في لوحة واحدة." },
 ];
 
 const TICKET_ITEMS = [
-  { qty: "٢×", name: "لاتيه مثلّج", price: "٣٢ ر.س" },
+  { qty: "٢×", name: "آيس لاتيه", price: "٣٢ ر.س" },
   { qty: "١×", name: "كرواسون زعتر", price: "١٤ ر.س" },
   { qty: "١×", name: "مياه", price: "٣ ر.س" },
 ];
@@ -30,7 +30,7 @@ export function Services() {
       <div style={{ maxWidth: 1180, margin: "0 auto", padding: "0 clamp(16px,3vw,30px)" }}>
         <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 13, marginBottom: 34, maxWidth: 660 }}>
           <h2 style={{ margin: 0, fontSize: "clamp(26px,3.2vw,38px)", fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.3 }}>كل ما يحتاجه مشروعك</h2>
-          <p style={{ margin: 0, fontSize: 16, lineHeight: 1.7, color: "var(--qm-subtle)" }}>فريق واحد يتولى التصميم والتطوير والإطلاق والتشغيل، فلا تضيع الفكرة بين أكثر من جهة.</p>
+          <p style={{ margin: 0, fontSize: 16, lineHeight: 1.7, color: "var(--qm-subtle)" }}>فريق واحد يصمّم ويبرمج ويطلق ويشغّل، وما تحتاج تنسّق بين أكثر من جهة.</p>
         </div>
         <div style={{ display: "flex", flexWrap: "wrap", gap: 18 }}>
           <div className="hv-lift-shadow" style={{ flex: "1.6 1 560px", minWidth: 0, background: "var(--qm-surface)", border: "1px solid var(--qm-border)", borderRadius: 24, boxShadow: "var(--qm-shadow-card)", padding: 26, display: "flex", flexWrap: "wrap", alignItems: "stretch", gap: 24, transition: "transform var(--qm-dur-fast),box-shadow var(--qm-dur-fast)" }}>
@@ -41,7 +41,7 @@ export function Services() {
                 </span>
                 <h3 style={{ margin: 0, fontSize: 17, fontWeight: 700 }}>تطبيقات الويب</h3>
               </div>
-              <p style={{ margin: 0, fontSize: 14, lineHeight: 1.75, color: "var(--qm-subtle)" }}>منصات ولوحات تفتح في أجزاء من الثانية، مبنية بالاتجاه العربي من أول سطر — لا واجهة إنجليزية تُقلب في آخر لحظة.</p>
+              <p style={{ margin: 0, fontSize: 14, lineHeight: 1.75, color: "var(--qm-subtle)" }}>منصات ولوحات سريعة وخفيفة، نبنيها بالعربية ومن اليمين لليسار من أول سطر.</p>
               <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
                 <span style={{ fontSize: 11.5, fontWeight: 600, color: "var(--qm-subtle-2)", background: "var(--qm-surface-soft)", padding: "4px 10px", borderRadius: 999 }} dir="ltr">React</span>
                 <span style={{ fontSize: 11.5, fontWeight: 600, color: "var(--qm-subtle-2)", background: "var(--qm-surface-soft)", padding: "4px 10px", borderRadius: 999 }} dir="ltr">Next.js</span>
@@ -109,7 +109,7 @@ export function Services() {
                 </span>
                 <h3 style={{ margin: 0, fontSize: 17, fontWeight: 700 }}>تطبيقات الجوال</h3>
               </div>
-              <p style={{ margin: 0, fontSize: 14, lineHeight: 1.75, color: "var(--qm-subtle)" }}>تطبيق واحد يُبنى مرة ويصل لمتجري iOS وأندرويد في يوم الإطلاق نفسه — بأداء أصلي وتجربة نظيفة.</p>
+              <p style={{ margin: 0, fontSize: 14, lineHeight: 1.75, color: "var(--qm-subtle)" }}>نبني تطبيقك مرة واحدة، وينزل للآيفون والأندرويد في نفس اليوم، بأداء سلس على الاثنين.</p>
               <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
                 <span style={{ fontSize: 11.5, fontWeight: 600, color: "var(--qm-subtle-2)", background: "var(--qm-surface-soft)", padding: "4px 10px", borderRadius: 999 }} dir="ltr">React Native</span>
                 <span style={{ fontSize: 11.5, fontWeight: 600, color: "var(--qm-subtle-2)", background: "var(--qm-surface-soft)", padding: "4px 10px", borderRadius: 999 }} dir="ltr">Flutter</span>
@@ -144,10 +144,11 @@ export function Services() {
                 </span>
                 <h3 style={{ margin: 0, fontSize: 17, fontWeight: 700 }}>منصات SaaS</h3>
               </div>
-              <p style={{ margin: 0, fontSize: 14, lineHeight: 1.75, color: "var(--qm-subtle)" }}>من الفكرة إلى منتج يُشترى: اشتراكات، فواتير، صلاحيات، وحسابات متعددة — جاهزة من اليوم الأول.</p>
+              <p style={{ margin: 0, fontSize: 14, lineHeight: 1.75, color: "var(--qm-subtle)" }}>منصة يشترك فيها عملاؤك ويدفعون: اشتراكات وفواتير وصلاحيات وحسابات متعددة، جاهزة من أول يوم.</p>
               <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
                 <span style={{ fontSize: 11.5, fontWeight: 600, color: "var(--qm-subtle-2)", background: "var(--qm-surface-soft)", padding: "4px 10px", borderRadius: 999 }} dir="ltr">Multi-tenant</span>
-                <span style={{ fontSize: 11.5, fontWeight: 600, color: "var(--qm-subtle-2)", background: "var(--qm-surface-soft)", padding: "4px 10px", borderRadius: 999 }} dir="ltr">Stripe</span>
+                <span style={{ fontSize: 11.5, fontWeight: 600, color: "var(--qm-subtle-2)", background: "var(--qm-surface-soft)", padding: "4px 10px", borderRadius: 999 }}>مدى</span>
+                <span style={{ fontSize: 11.5, fontWeight: 600, color: "var(--qm-subtle-2)", background: "var(--qm-surface-soft)", padding: "4px 10px", borderRadius: 999 }} dir="ltr">Apple Pay</span>
                 <span style={{ fontSize: 11.5, fontWeight: 600, color: "var(--qm-subtle-2)", background: "var(--qm-surface-soft)", padding: "4px 10px", borderRadius: 999 }} dir="ltr">Auth</span>
               </div>
             </div>
@@ -182,7 +183,7 @@ export function Services() {
                 </span>
                 <h3 style={{ margin: 0, fontSize: 17, fontWeight: 700 }}>لوحات التحكم والتحليلات</h3>
               </div>
-              <p style={{ margin: 0, fontSize: 14, lineHeight: 1.75, color: "var(--qm-subtle)" }}>أرقامك تُقرأ بلمحة: مؤشرات حية، تقارير، وتصدير جاهز للإدارة — بدل جداول لا يفتحها أحد.</p>
+              <p style={{ margin: 0, fontSize: 14, lineHeight: 1.75, color: "var(--qm-subtle)" }}>أرقامك واضحة من أول نظرة: مؤشرات لحظية وتقارير وتصدير جاهز للإدارة، بدل ملفات إكسل ما يفتحها أحد.</p>
               <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
                 <span style={{ fontSize: 11.5, fontWeight: 600, color: "var(--qm-subtle-2)", background: "var(--qm-surface-soft)", padding: "4px 10px", borderRadius: 999 }} dir="ltr">Charts</span>
                 <span style={{ fontSize: 11.5, fontWeight: 600, color: "var(--qm-subtle-2)", background: "var(--qm-surface-soft)", padding: "4px 10px", borderRadius: 999 }} dir="ltr">BI</span>
@@ -192,7 +193,7 @@ export function Services() {
           <div className="hv-lift-shadow" style={{ flex: "1 1 300px", minWidth: 0, background: "var(--qm-surface)", border: "1px solid var(--qm-border)", borderRadius: 24, boxShadow: "var(--qm-shadow-card)", padding: 26, display: "flex", flexDirection: "column", gap: 16, transition: "transform var(--qm-dur-fast),box-shadow var(--qm-dur-fast)" }}>
             <div style={{ height: 176, background: "var(--qm-surface-row)", border: "1px solid var(--qm-hairline)", borderRadius: 16, padding: 14, display: "flex", flexDirection: "column", justifyContent: "center", gap: 8 }}>
               <div style={{ alignSelf: "flex-start", maxWidth: "85%", background: "var(--qm-surface)", border: "1px solid var(--qm-hairline)", borderRadius: 13, borderStartStartRadius: 4, padding: "8px 12px", fontSize: 12, fontWeight: 500, lineHeight: 1.7, color: "var(--qm-ink)", animation: "qmMsgA 9s ease infinite" }}>وش وضع مشروعي هذا الأسبوع؟</div>
-              <div style={{ alignSelf: "flex-end", maxWidth: "88%", background: "var(--qm-primary-tint)", borderRadius: 13, borderStartEndRadius: 4, padding: "8px 12px", fontSize: 12, fontWeight: 600, lineHeight: 1.7, color: "var(--qm-primary)", animation: "qmMsgB 9s ease infinite" }}>أنجز الفريق ٨ من ١٠ مهام — الإطلاق في موعده.</div>
+              <div style={{ alignSelf: "flex-end", maxWidth: "88%", background: "var(--qm-primary-tint)", borderRadius: 13, borderStartEndRadius: 4, padding: "8px 12px", fontSize: 12, fontWeight: 600, lineHeight: 1.7, color: "var(--qm-primary)", animation: "qmMsgB 9s ease infinite" }}>خلّص الفريق ٨ من ١٠ مهام، والإطلاق في موعده.</div>
               <div style={{ alignSelf: "flex-end", background: "var(--qm-surface)", border: "1px solid var(--qm-hairline)", borderRadius: 13, padding: "9px 12px", display: "flex", alignItems: "center", gap: 4, animation: "qmMsgC 9s ease infinite" }}>
                 <span style={{ width: 5, height: 5, borderRadius: "50%", background: "var(--qm-faint)", animation: "qmDot 1.3s ease-in-out infinite" }} />
                 <span style={{ width: 5, height: 5, borderRadius: "50%", background: "var(--qm-faint)", animation: "qmDot 1.3s ease-in-out infinite", animationDelay: ".18s" }} />
@@ -206,7 +207,7 @@ export function Services() {
                 </span>
                 <h3 style={{ margin: 0, fontSize: 17, fontWeight: 700 }}>الذكاء الاصطناعي</h3>
               </div>
-              <p style={{ margin: 0, fontSize: 14, lineHeight: 1.75, color: "var(--qm-subtle)" }}>مساعدون يفهمون عميلك بلهجته، يجيبون من بياناتك وحدها، ويحوّلون الصعب لموظف — ذكاء ينجز لا يستعرض.</p>
+              <p style={{ margin: 0, fontSize: 14, lineHeight: 1.75, color: "var(--qm-subtle)" }}>مساعد ذكي يفهم عميلك بلهجته، ويرد من بياناتك فقط، وإذا صعب عليه السؤال حوّله لموظف.</p>
               <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
                 <span style={{ fontSize: 11.5, fontWeight: 600, color: "var(--qm-subtle-2)", background: "var(--qm-surface-soft)", padding: "4px 10px", borderRadius: 999 }} dir="ltr">LLM</span>
                 <span style={{ fontSize: 11.5, fontWeight: 600, color: "var(--qm-subtle-2)", background: "var(--qm-surface-soft)", padding: "4px 10px", borderRadius: 999 }} dir="ltr">RAG</span>
@@ -222,7 +223,7 @@ export function Services() {
                 </span>
                 <h3 style={{ margin: 0, fontSize: 17, fontWeight: 700 }}>تصميم المنتج</h3>
               </div>
-              <p style={{ margin: 0, fontSize: 14, lineHeight: 1.75, color: "var(--qm-subtle)" }}>رحلة المستخدم ونظام تصميم متكامل قبل أول سطر كود — تجرّب كل شاشة بيدك فتعرف ما ستحصل عليه بالضبط.</p>
+              <p style={{ margin: 0, fontSize: 14, lineHeight: 1.75, color: "var(--qm-subtle)" }}>نصمّم رحلة المستخدم وكل الشاشات قبل أول سطر كود. تجرّبها بنفسك، وتستلم منتجك بدون مفاجآت.</p>
               <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
                 <span style={{ fontSize: 11.5, fontWeight: 600, color: "var(--qm-subtle-2)", background: "var(--qm-surface-soft)", padding: "4px 10px", borderRadius: 999 }} dir="ltr">UI/UX</span>
                 <span style={{ fontSize: 11.5, fontWeight: 600, color: "var(--qm-subtle-2)", background: "var(--qm-surface-soft)", padding: "4px 10px", borderRadius: 999 }} dir="ltr">Design System</span>
@@ -267,7 +268,7 @@ export function Services() {
                 </span>
                 <h3 style={{ margin: 0, fontSize: 17, fontWeight: 700 }}>حلول المطاعم والمقاهي</h3>
               </div>
-              <p style={{ margin: 0, fontSize: 14, lineHeight: 1.75, color: "var(--qm-subtle)" }}>كل ما يحتاجه مطعمك أو مقهاك رقميًا، وتحت اسمك أنت: من طلب الطاولة إلى تقرير آخر اليوم.</p>
+              <p style={{ margin: 0, fontSize: 14, lineHeight: 1.75, color: "var(--qm-subtle)" }}>كل ما يحتاجه مطعمك أو مقهاك من أنظمة، وباسمك أنت: من طلب الطاولة إلى تقرير آخر اليوم.</p>
               <ul style={{ listStyle: "none", margin: "6px 0 0", padding: 0, display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(max(210px,calc(50% - 9px)),1fr))", gap: "14px 18px" }}>
                 {RESTAURANT_FEATURES.map((f) => (
                   <li key={f.title} style={{ display: "flex", alignItems: "flex-start", gap: 10, minWidth: 0 }}>
@@ -384,7 +385,7 @@ export function Services() {
                 </span>
                 <h3 style={{ margin: 0, fontSize: 17, fontWeight: 700 }}>عقود التشغيل والدعم</h3>
               </div>
-              <p style={{ margin: 0, fontSize: 14, lineHeight: 1.75, color: "var(--qm-subtle)" }}>بعد الإطلاق لا نختفي: نستضيف نظامك ونراقبه ونصونه ونطوّره باشتراك شهري أو سنوي — للمطاعم والمقاهي والشركات.</p>
+              <p style={{ margin: 0, fontSize: 14, lineHeight: 1.75, color: "var(--qm-subtle)" }}>ما نختفي بعد الإطلاق. نستضيف نظامك ونراقبه ونصونه ونطوّره باشتراك شهري أو سنوي، للمطاعم والمقاهي والشركات.</p>
               <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
                 <span style={{ fontSize: 11.5, fontWeight: 600, color: "var(--qm-subtle-2)", background: "var(--qm-surface-soft)", padding: "4px 10px", borderRadius: 999 }}>استضافة ومراقبة</span>
                 <span style={{ fontSize: 11.5, fontWeight: 600, color: "var(--qm-subtle-2)", background: "var(--qm-surface-soft)", padding: "4px 10px", borderRadius: 999 }}>صيانة وتحديثات</span>
@@ -430,7 +431,7 @@ export function Services() {
                 </span>
                 <h3 style={{ margin: 0, fontSize: 17, fontWeight: 700 }}>التدريب على أدوات الذكاء الاصطناعي</h3>
               </div>
-              <p style={{ margin: 0, fontSize: 14, lineHeight: 1.75, color: "var(--qm-subtle)" }}>ورش عملية لفرق الشركات ودورات للأفراد، نتدرّب فيها على أدوات الذكاء الاصطناعي بمهام من واقع العمل — فتخرج بمهارة تستخدمها من الغد.</p>
+              <p style={{ margin: 0, fontSize: 14, lineHeight: 1.75, color: "var(--qm-subtle)" }}>ورش عملية لفرق الشركات ودورات للأفراد. نتدرّب على أدوات الذكاء الاصطناعي بمهام من عملك اليومي، وتخرج بمهارة تستخدمها من ثاني يوم.</p>
               <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
                 <span style={{ fontSize: 11.5, fontWeight: 600, color: "var(--qm-subtle-2)", background: "var(--qm-surface-soft)", padding: "4px 10px", borderRadius: 999 }}>ورش للشركات</span>
                 <span style={{ fontSize: 11.5, fontWeight: 600, color: "var(--qm-subtle-2)", background: "var(--qm-surface-soft)", padding: "4px 10px", borderRadius: 999 }}>دورات للأفراد</span>
@@ -441,12 +442,12 @@ export function Services() {
           <div style={{ flex: "1 1 100%", minWidth: 0, position: "relative", overflow: "hidden", background: "linear-gradient(160deg,#5a5189,#453f6b)", borderRadius: 24, boxShadow: "var(--qm-shadow-raised)", padding: "clamp(24px,3.4vw,40px)", display: "flex", flexWrap: "wrap", alignItems: "center", gap: "clamp(24px,4vw,52px)" }}>
             <div style={{ flex: "1.2 1 320px", minWidth: 0, display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 13 }}>
               <h3 style={{ margin: 0, fontSize: "clamp(21px,2.4vw,28px)", fontWeight: 700, color: "#fff", lineHeight: 1.35 }}>بطاقات NFC ذكية باسم علامتك</h3>
-              <p style={{ margin: 0, fontSize: 14.5, lineHeight: 1.85, color: "rgba(255,255,255,.82)", maxWidth: 460 }}>بطاقة تعريف واحدة تلامس بها أي جوال، فيفتح ملفك كاملًا — أرقامك وموقعك وحساباتك. غيّر بياناتك من لوحة الإدارة وتتحدّث البطاقة لحظيًا، بلا إعادة طباعة.</p>
+              <p style={{ margin: 0, fontSize: 14.5, lineHeight: 1.85, color: "rgba(255,255,255,.82)", maxWidth: 460 }}>بطاقة واحدة تقرّبها من أي جوال، ويفتح ملفك كاملًا: أرقامك وموقعك وحساباتك. وإذا تغيّرت بياناتك عدّلها من لوحة التحكم، وتتحدّث البطاقة مباشرة بدون إعادة طباعة.</p>
               <div style={{ display: "flex", flexWrap: "wrap", gap: 7 }}>
-                <span style={{ fontSize: 11.5, fontWeight: 600, color: "#fff", background: "rgba(255,255,255,.12)", padding: "4px 12px", borderRadius: 999 }}>بلا تطبيق</span>
-                <span style={{ fontSize: 11.5, fontWeight: 600, color: "#fff", background: "rgba(255,255,255,.12)", padding: "4px 12px", borderRadius: 999 }}>iOS وأندرويد</span>
+                <span style={{ fontSize: 11.5, fontWeight: 600, color: "#fff", background: "rgba(255,255,255,.12)", padding: "4px 12px", borderRadius: 999 }}>بدون تطبيق</span>
+                <span style={{ fontSize: 11.5, fontWeight: 600, color: "#fff", background: "rgba(255,255,255,.12)", padding: "4px 12px", borderRadius: 999 }}>آيفون وأندرويد</span>
                 <span style={{ fontSize: 11.5, fontWeight: 600, color: "#fff", background: "rgba(255,255,255,.12)", padding: "4px 12px", borderRadius: 999 }}>تحديث لحظي</span>
-                <span style={{ fontSize: 11.5, fontWeight: 600, color: "#fff", background: "rgba(255,255,255,.12)", padding: "4px 12px", borderRadius: 999 }} dir="ltr">QR احتياطي</span>
+                <span style={{ fontSize: 11.5, fontWeight: 600, color: "#fff", background: "rgba(255,255,255,.12)", padding: "4px 12px", borderRadius: 999 }}>باركود احتياطي</span>
               </div>
               <a href="#brief" className="hv-bg-primary-tint qm-focus" style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#fff", color: "var(--qm-primary)", borderRadius: 12, padding: "11px 20px", fontSize: 13.5, fontWeight: 600, cursor: "pointer", marginTop: 5, transition: "background var(--qm-dur-fast)" }}>
                 اطلب بطاقتك

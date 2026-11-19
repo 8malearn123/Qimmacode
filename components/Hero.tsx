@@ -5,16 +5,14 @@ export function Hero() {
     <section id="top" style={{ padding: "clamp(28px,4vw,44px) 0 clamp(40px,5vw,64px)" }}>
       <div style={{ maxWidth: 1180, margin: "0 auto", padding: "0 clamp(16px,3vw,30px)", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center" }}>
         <h1 style={{ margin: "0 0 clamp(22px,2.6vw,32px)", fontSize: "clamp(36px,5.2vw,64px)", fontWeight: 700, lineHeight: 1.24, letterSpacing: -0.7, maxWidth: 880 }}>
-          من فكرة على ورق
+          فكرتك على ورق؟
           <br />
-          إلى
-          {" "}
-          <span style={{ backgroundImage: "linear-gradient(90deg,var(--qm-teal-tint),var(--qm-teal-tint))", backgroundRepeat: "no-repeat", backgroundPosition: "right center", backgroundSize: "0% 100%", borderRadius: 12, padding: "1px 10px", animation: "qmMark .9s cubic-bezier(.22,.61,.36,1) .5s forwards" }}>منتج يستخدمه الآلاف.</span>
+          <span style={{ backgroundImage: "linear-gradient(90deg,var(--qm-teal-tint),var(--qm-teal-tint))", backgroundRepeat: "no-repeat", backgroundPosition: "right center", backgroundSize: "0% 100%", borderRadius: 12, padding: "1px 10px", animation: "qmMark .9s cubic-bezier(.22,.61,.36,1) .5s forwards" }}>التنفيذ علينا.</span>
         </h1>
         <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 12, marginBottom: "clamp(28px,3.6vw,48px)" }}>
           {/* 52px rows around 42px buttons — reproduces the spacing of the approved design. */}
           <div style={{ height: 52 }}>
-            <Button icon="rocket_launch" href="#brief">اطلب عرضًا لمشروعك</Button>
+            <Button icon="rocket_launch" href="#brief">اطلب عرض سعر</Button>
           </div>
           <div style={{ height: 52 }}>
             <Button variant="ghost" icon="folder_special" href="#work">شاهد أعمالنا</Button>

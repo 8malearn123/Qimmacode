@@ -117,7 +117,7 @@ function BoardPreview() {
       <div style={{ flex: 1, minWidth: 0, display: "flex", flexDirection: "column" }}>
         <div style={{ display: "flex", alignItems: "center", gap: 9, padding: "11px 16px", background: "var(--qm-surface)", borderBottom: "1px solid var(--qm-hairline)" }}>
           <span style={{ fontSize: 12.5, fontWeight: 700, color: "var(--qm-ink)", ...ellipsis }}>إطلاق النسخة الثانية</span>
-          <Pill tone="teal">على المسار</Pill>
+          <Pill tone="teal">حسب الخطة</Pill>
           <span style={{ display: "flex", marginInlineStart: "auto" }}>
             {["var(--qm-avatar-1)", "var(--qm-avatar-2)", "var(--qm-avatar-7)"].map((c, i) => (
               <span key={c} style={{ marginInlineStart: i ? -6 : 0, display: "flex" }}>
@@ -328,7 +328,7 @@ function AssistantPreview() {
           <Bubble from="customer">أبغى أغيّر عنوان التوصيل لو سمحت</Bubble>
           <span style={{ alignSelf: "center", display: "inline-flex", alignItems: "center", gap: 5, fontSize: 9.5, fontWeight: 700, color: "var(--qm-orange-deep)", background: "var(--qm-orange-tint)", borderRadius: 999, padding: "4px 10px", whiteSpace: "nowrap" }}>
             <Icon name="support_agent" size={13} color="var(--qm-orange-deep)" />
-            حُوّلت المحادثة لموظف مع كامل السياق
+            تحوّلت المحادثة لموظف مع كل التفاصيل
           </span>
           <div style={{ alignSelf: "flex-end", ...card, borderRadius: 12, padding: "8px 11px", display: "flex", alignItems: "center", gap: 4 }}>
             {[0, 0.18, 0.36].map((delay) => (
@@ -402,7 +402,7 @@ function TrackingScreen() {
 
 const ORDERS: { id: string; meta: string; icon: string; tone: Tone; status: [string, Tone] }[] = [
   { id: "طلب ٤٨٢١", meta: "٣ منتجات · ٤٥ ر.س", icon: "two_wheeler", tone: "teal", status: ["في الطريق", "teal"] },
-  { id: "طلب ٤٨١٧", meta: "منتجان · ٢٨ ر.س", icon: "storefront", tone: "primary", status: ["يُجهَّز", "primary"] },
+  { id: "طلب ٤٨١٧", meta: "منتجان · ٢٨ ر.س", icon: "storefront", tone: "primary", status: ["يتجهّز", "primary"] },
   { id: "طلب ٤٧٩٠", meta: "٥ منتجات · ٩٢ ر.س", icon: "check_circle", tone: "neutral", status: ["وصل", "neutral"] },
   { id: "طلب ٤٧٥٢", meta: "منتج واحد · ١٩ ر.س", icon: "check_circle", tone: "neutral", status: ["وصل", "neutral"] },
 ];

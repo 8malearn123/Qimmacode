@@ -7,8 +7,8 @@ export function Faq() {
     <section id="faq" style={{ scrollMarginTop: 92, padding: "clamp(48px,6vw,86px) 0" }} data-reveal="1">
       <div data-rsp="faq-grid" style={{ maxWidth: 1180, margin: "0 auto", padding: "0 clamp(16px,3vw,30px)", display: "grid", gridTemplateColumns: "minmax(300px,420px) 1fr", gap: "clamp(24px,4vw,48px)", alignItems: "start" }}>
         <div data-rsp="faq-intro" style={{ maxWidth: 420 }}>
-          <h2 style={{ margin: "14px 0 12px", fontSize: "clamp(26px,3.2vw,38px)", fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.3 }}>في بالك أسئلة</h2>
-          <p style={{ margin: "0 0 22px", fontSize: 16, lineHeight: 1.7, color: "var(--qm-subtle)" }}>لم تجد سؤالك؟ اكتبه في الطلب وسنجيب عليه في أول رد.</p>
+          <h2 style={{ margin: "14px 0 12px", fontSize: "clamp(26px,3.2vw,38px)", fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.3 }}>في بالك سؤال؟</h2>
+          <p style={{ margin: "0 0 22px", fontSize: 16, lineHeight: 1.7, color: "var(--qm-subtle)" }}>ما لقيت سؤالك؟ اكتبه في الطلب ونجاوبك في أول رد.</p>
         </div>
         <FaqList />
         <div data-rsp="faq-ask" style={{ gridColumn: 1, gridRow: 2, alignSelf: "start", maxWidth: 420, background: "var(--qm-surface)", border: "1px solid var(--qm-border)", borderRadius: 20, boxShadow: "var(--qm-shadow-card)", padding: 20, display: "flex", flexDirection: "column", gap: 16 }}>
@@ -22,8 +22,8 @@ export function Faq() {
               </span>
             </div>
             <div style={{ minWidth: 0 }}>
-              <div style={{ fontSize: 13.5, fontWeight: 700 }}>يجيبك مهندس من الفريق</div>
-              <div style={{ fontSize: 12, color: "var(--qm-muted)", marginTop: 2 }}>لا مندوب مبيعات، ولا ردود جاهزة.</div>
+              <div style={{ fontSize: 13.5, fontWeight: 700 }}>يرد عليك مهندس من الفريق</div>
+              <div style={{ fontSize: 12, color: "var(--qm-muted)", marginTop: 2 }}>بدون مندوب مبيعات، وبدون ردود جاهزة.</div>
             </div>
           </div>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 7 }}>
@@ -36,7 +36,7 @@ export function Faq() {
               اتفاقية سرية عند الطلب
             </span>
           </div>
-          <Button variant="soft" icon="mail" href="#brief">اسأل مباشرة</Button>
+          <Button variant="soft" icon="mail" href="#brief">اسألنا مباشرة</Button>
         </div>
       </div>
     </section>

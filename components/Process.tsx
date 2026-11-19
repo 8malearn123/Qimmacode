@@ -3,19 +3,19 @@ export function Process() {
     <section id="process" style={{ scrollMarginTop: 92, padding: "clamp(48px,6vw,86px) 0" }} data-reveal="1">
       <div style={{ maxWidth: 1180, margin: "0 auto", padding: "0 clamp(16px,3vw,30px)" }}>
         <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 13, marginBottom: 34, maxWidth: 660 }}>
-          <h2 style={{ margin: 0, fontSize: "clamp(26px,3.2vw,38px)", fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.3 }}>أربع خطوات</h2>
-          <p style={{ margin: 0, fontSize: 16, lineHeight: 1.7, color: "var(--qm-subtle)" }}>تعرف في كل أسبوع أين وصل مشروعك وتجرّبه بيدك</p>
+          <h2 style={{ margin: 0, fontSize: "clamp(26px,3.2vw,38px)", fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.3 }}>كيف نعمل معك</h2>
+          <p style={{ margin: 0, fontSize: 16, lineHeight: 1.7, color: "var(--qm-subtle)" }}>أربع خطوات، وكل أسبوع تعرف أين وصل مشروعك.</p>
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: "clamp(52px,7vw,88px)" }}>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(min(100%,340px),1fr))", gap: "clamp(28px,5vw,64px)", alignItems: "center" }}>
             <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 14, maxWidth: 460 }}>
               <h3 style={{ margin: 0, fontSize: "clamp(26px,3.2vw,38px)", fontWeight: 700, lineHeight: 1.35, letterSpacing: -0.5 }}>
-                جلسة
+                نسمع
                 {" "}
-                <span style={{ color: "var(--qm-teal-deep)", backgroundImage: "linear-gradient(90deg,var(--qm-teal-tint),var(--qm-teal-tint))", backgroundRepeat: "no-repeat", backgroundPosition: "right bottom", backgroundSize: "100% 32%", borderRadius: 8, padding: "0 8px" }}>استكشاف</span>
+                <span style={{ color: "var(--qm-teal-deep)", backgroundImage: "linear-gradient(90deg,var(--qm-teal-tint),var(--qm-teal-tint))", backgroundRepeat: "no-repeat", backgroundPosition: "right bottom", backgroundSize: "100% 32%", borderRadius: 8, padding: "0 8px" }}>منك أولًا</span>
               </h3>
-              <p style={{ margin: 0, fontSize: "clamp(14.5px,1.3vw,16px)", lineHeight: 1.85, color: "var(--qm-subtle)" }}>45 دقيقة نفهم فيها هدفك ومستخدمك، ونحدد أقصر طريق للإطلاق.</p>
-              <span style={{ fontSize: 11.5, fontWeight: 700, color: "var(--qm-teal-deep)", background: "var(--qm-teal-tint)", padding: "4px 12px", borderRadius: 999, marginTop: 2 }}>مجانًا وبلا التزام</span>
+              <p style={{ margin: 0, fontSize: "clamp(14.5px,1.3vw,16px)", lineHeight: 1.85, color: "var(--qm-subtle)" }}>45 دقيقة نفهم فيها مشروعك وعملاءك، ونحدد معك أقصر طريق للإطلاق.</p>
+              <span style={{ fontSize: 11.5, fontWeight: 700, color: "var(--qm-teal-deep)", background: "var(--qm-teal-tint)", padding: "4px 12px", borderRadius: 999, marginTop: 2 }}>مجانًا وبدون أي التزام</span>
             </div>
             <div style={{ width: "min(480px,100%)", marginInlineStart: "auto", background: "var(--qm-surface)", border: "1px solid var(--qm-border)", borderRadius: 22, boxShadow: "var(--qm-shadow-raised)", padding: 14, transform: "rotate(-1.2deg)" }}>
               <div style={{ height: 146 }}>
@@ -53,7 +53,7 @@ export function Process() {
                     <div style={{ display: "flex", flexDirection: "column", gap: 5, animation: "qmVeil 9s linear infinite" }}>
                       <div style={{ display: "flex", alignItems: "center", gap: 5 }}>
                         <span className="msr" aria-hidden="true" style={{ fontSize: 12, color: "var(--qm-primary)" }}>checklist</span>
-                        <span style={{ fontSize: 9.5, fontWeight: 700, color: "var(--qm-faint)", whiteSpace: "nowrap" }}>وثيقة النطاق والمحطات</span>
+                        <span style={{ fontSize: 9.5, fontWeight: 700, color: "var(--qm-faint)", whiteSpace: "nowrap" }}>نطاق العمل والمراحل</span>
                       </div>
                       <div style={{ display: "flex", alignItems: "center", gap: 5, background: "var(--qm-surface)", border: "1px solid var(--qm-hairline)", borderRadius: 8, padding: "4px 7px", animation: "qmBld1 9s cubic-bezier(.22,.61,.36,1) infinite" }}>
                         <span className="msr" aria-hidden="true" style={{ fontSize: 11, color: "var(--qm-teal-deep)" }}>flag</span>
@@ -77,23 +77,23 @@ export function Process() {
             </div>
             <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 14, maxWidth: 460 }}>
               <h3 style={{ margin: 0, fontSize: "clamp(26px,3.2vw,38px)", fontWeight: 700, lineHeight: 1.35, letterSpacing: -0.5 }}>
-                نطاق
+                نتفق
                 {" "}
-                <span style={{ color: "var(--qm-primary)", backgroundImage: "linear-gradient(90deg,var(--qm-primary-tint),var(--qm-primary-tint))", backgroundRepeat: "no-repeat", backgroundPosition: "right bottom", backgroundSize: "100% 32%", borderRadius: 8, padding: "0 8px" }}>وخطة مكتوبة</span>
+                <span style={{ color: "var(--qm-primary)", backgroundImage: "linear-gradient(90deg,var(--qm-primary-tint),var(--qm-primary-tint))", backgroundRepeat: "no-repeat", backgroundPosition: "right bottom", backgroundSize: "100% 32%", borderRadius: 8, padding: "0 8px" }}>على خطة مكتوبة</span>
               </h3>
-              <p style={{ margin: 0, fontSize: "clamp(14.5px,1.3vw,16px)", lineHeight: 1.85, color: "var(--qm-subtle)" }}>خطة مقسّمة على مراحل، لكل محطة تاريخها وتسليماتها المحددة.</p>
+              <p style={{ margin: 0, fontSize: "clamp(14.5px,1.3vw,16px)", lineHeight: 1.85, color: "var(--qm-subtle)" }}>خطة مقسّمة على مراحل، ولكل مرحلة موعدها ومخرجاتها.</p>
               <span style={{ fontSize: 11.5, fontWeight: 700, color: "var(--qm-primary)", background: "var(--qm-primary-tint)", padding: "4px 12px", borderRadius: 999, marginTop: 2 }}>قبل أي دفعة</span>
             </div>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(min(100%,340px),1fr))", gap: "clamp(28px,5vw,64px)", alignItems: "center" }}>
             <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 14, maxWidth: 460 }}>
               <h3 style={{ margin: 0, fontSize: "clamp(26px,3.2vw,38px)", fontWeight: 700, lineHeight: 1.35, letterSpacing: -0.5 }}>
-                تطوير
+                نبني
                 {" "}
-                <span style={{ color: "var(--qm-orange-deep)", backgroundImage: "linear-gradient(90deg,var(--qm-orange-tint),var(--qm-orange-tint))", backgroundRepeat: "no-repeat", backgroundPosition: "right bottom", backgroundSize: "100% 32%", borderRadius: 8, padding: "0 8px" }}>بدفعات أسبوعية</span>
+                <span style={{ color: "var(--qm-orange-deep)", backgroundImage: "linear-gradient(90deg,var(--qm-orange-tint),var(--qm-orange-tint))", backgroundRepeat: "no-repeat", backgroundPosition: "right bottom", backgroundSize: "100% 32%", borderRadius: 8, padding: "0 8px" }}>وتجرّب كل أسبوع</span>
               </h3>
-              <p style={{ margin: 0, fontSize: "clamp(14.5px,1.3vw,16px)", lineHeight: 1.85, color: "var(--qm-subtle)" }}>كل أسبوع شيء جاهز تجرّبه بيدك — لا عروض شرائح ولا وعود.</p>
-              <span style={{ fontSize: 11.5, fontWeight: 700, color: "var(--qm-orange-deep)", background: "var(--qm-orange-tint)", padding: "4px 12px", borderRadius: 999, marginTop: 2 }}>إصدار كل أسبوع</span>
+              <p style={{ margin: 0, fontSize: "clamp(14.5px,1.3vw,16px)", lineHeight: 1.85, color: "var(--qm-subtle)" }}>كل أسبوع تستلم جزءًا جاهزًا من مشروعك، وتتابعه وهو يكبر.</p>
+              <span style={{ fontSize: 11.5, fontWeight: 700, color: "var(--qm-orange-deep)", background: "var(--qm-orange-tint)", padding: "4px 12px", borderRadius: 999, marginTop: 2 }}>نسخة جديدة كل أسبوع</span>
             </div>
             <div style={{ width: "min(480px,100%)", marginInlineStart: "auto", background: "var(--qm-surface)", border: "1px solid var(--qm-border)", borderRadius: 22, boxShadow: "var(--qm-shadow-raised)", padding: 14, transform: "rotate(-1.2deg)" }}>
               <div style={{ height: 146 }}>
@@ -115,7 +115,7 @@ export function Process() {
                       </span>
                       <div style={{ alignSelf: "flex-start", display: "inline-flex", alignItems: "center", gap: 5, background: "var(--qm-surface)", border: "1px solid var(--qm-border)", borderRadius: 999, boxShadow: "var(--qm-shadow-card)", padding: "4px 9px", animation: "qmToastB 9s cubic-bezier(.22,.61,.36,1) infinite" }}>
                         <span className="msr" aria-hidden="true" style={{ fontSize: 12, color: "var(--qm-teal-deep)" }}>link</span>
-                        <span style={{ fontSize: 9.5, fontWeight: 700, color: "var(--qm-subtle)", whiteSpace: "nowrap" }}>رابط تجريبي جديد — جرّبه بيدك</span>
+                        <span style={{ fontSize: 9.5, fontWeight: 700, color: "var(--qm-subtle)", whiteSpace: "nowrap" }}>رابط تجريبي جديد، جرّبه بنفسك</span>
                       </div>
                     </div>
                   </div>
@@ -151,11 +151,11 @@ export function Process() {
             </div>
             <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 14, maxWidth: 460 }}>
               <h3 style={{ margin: 0, fontSize: "clamp(26px,3.2vw,38px)", fontWeight: 700, lineHeight: 1.35, letterSpacing: -0.5 }}>
-                إطلاق
+                نطلق
                 {" "}
-                <span style={{ color: "var(--qm-teal-deep)", backgroundImage: "linear-gradient(90deg,var(--qm-teal-tint),var(--qm-teal-tint))", backgroundRepeat: "no-repeat", backgroundPosition: "right bottom", backgroundSize: "100% 32%", borderRadius: 8, padding: "0 8px" }}>ومتابعة</span>
+                <span style={{ color: "var(--qm-teal-deep)", backgroundImage: "linear-gradient(90deg,var(--qm-teal-tint),var(--qm-teal-tint))", backgroundRepeat: "no-repeat", backgroundPosition: "right bottom", backgroundSize: "100% 32%", borderRadius: 8, padding: "0 8px" }}>ونبقى معك</span>
               </h3>
-              <p style={{ margin: 0, fontSize: "clamp(14.5px,1.3vw,16px)", lineHeight: 1.85, color: "var(--qm-subtle)" }}>ننشر المنتج، نراقب أداءه، ونبقى معك بعد الإطلاق لا قبله فقط.</p>
+              <p style={{ margin: 0, fontSize: "clamp(14.5px,1.3vw,16px)", lineHeight: 1.85, color: "var(--qm-subtle)" }}>ننشر المنتج ونراقب أداءه، ونكمل معك بعد الإطلاق.</p>
               <span style={{ fontSize: 11.5, fontWeight: 700, color: "var(--qm-teal-deep)", background: "var(--qm-teal-tint)", padding: "4px 12px", borderRadius: 999, marginTop: 2 }}>الكود ملكك بالكامل</span>
             </div>
           </div>
