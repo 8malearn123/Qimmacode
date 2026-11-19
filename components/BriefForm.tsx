@@ -2,10 +2,11 @@
 
 import { useState, type ChangeEvent, type CSSProperties, type FormEvent, type ReactNode } from "react";
 import { Button } from "@/components/ui/Button";
-import { BUDGET_OPTIONS, EMPTY_BRIEF, MAX_LENGTH, MESSAGES, TIMELINE_OPTIONS, validateBrief, type Brief } from "@/lib/brief";
+import { EMPTY_BRIEF, MAX_LENGTH, MESSAGES, TIMELINE_OPTIONS, groupDigits, validateBrief, type Brief } from "@/lib/brief";
 
 const labelText: CSSProperties = { display: "block", fontSize: 12.5, fontWeight: 600, color: "var(--qm-subtle)", marginBottom: 6 };
 const twoCols: CSSProperties = { display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(190px,1fr))", gap: 12 };
+const unitText: CSSProperties = { position: "absolute", insetInlineEnd: 13, top: "50%", transform: "translateY(-50%)", fontSize: 13, color: "var(--qm-muted)", pointerEvents: "none" };
 
 function Field({ label, children }: { label: string; children: ReactNode }) {
   return (
@@ -13,6 +14,44 @@ function Field({ label, children }: { label: string; children: ReactNode }) {
       <span style={labelText}>{label}</span>
       {children}
     </label>
+  );
+}
+
+/** Typed or pasted amount → plain digits without leading zeros: "٥٠٬٠٠٠" → "50000". */
+function toDigits(text: string) {
+  return text
+    .replace(/[٠-٩]/g, (d) => String(d.charCodeAt(0) - 0x660))
+    .replace(/[۰-۹]/g, (d) => String(d.charCodeAt(0) - 0x6f0))
+    .replace(/\D/g, "")
+    .replace(/^0+(?=\d)/, "");
+}
+
+/** The budget as a number the visitor types, in riyals, grouped as they type ("50,000"). */
+function BudgetInput({ value, onChange }: { value: string; onChange: (digits: string) => void }) {
+  function handleChange(e: ChangeEvent<HTMLInputElement>) {
+    const input = e.target;
+    const caret = input.selectionStart ?? input.value.length;
+    // Dots never stay in the field, so a trailing ".00" can only come from a paste:
+    // drop it rather than read "50,000.00" as 5,000,000.
+    const text = caret === input.value.length ? input.value.replace(/[.٫][0-9٠-٩۰-۹]{0,2}$/, "") : input.value;
+    const digits = toDigits(text).slice(0, MAX_LENGTH.budget);
+    const shown = groupDigits(digits);
+    // Commas shift as the number grows, so put the caret back after the same digit.
+    const before = Math.min(toDigits(text.slice(0, caret)).length, digits.length);
+    let pos = 0;
+    for (let seen = 0; seen < before; pos++) {
+      if (shown[pos] !== ",") seen++;
+    }
+    input.value = shown; // already matches the next render, so React leaves the caret where we put it
+    input.setSelectionRange(pos, pos);
+    onChange(digits);
+  }
+
+  return (
+    <span style={{ position: "relative", display: "block" }}>
+      <input className="qm-control" name="budget" inputMode="numeric" autoComplete="off" aria-describedby="brief-budget-unit" placeholder="مثال: 50,000" value={groupDigits(value)} onChange={handleChange} style={{ paddingInlineEnd: 48 }} />
+      <span id="brief-budget-unit" aria-hidden="true" style={unitText}>ريال</span>
+    </span>
   );
 }
 
@@ -103,11 +142,7 @@ export function BriefForm() {
 
       <div style={twoCols}>
         <Field label="الميزانية التقريبية">
-          <select className="qm-control" name="budget" value={form.budget} onChange={set("budget")}>
-            {BUDGET_OPTIONS.map((o) => (
-              <option key={o.value} value={o.value}>{o.label}</option>
-            ))}
-          </select>
+          <BudgetInput value={form.budget} onChange={(budget) => setForm((f) => ({ ...f, budget }))} />
         </Field>
         <Field label="الجدول الزمني">
           <select className="qm-control" name="timeline" value={form.timeline} onChange={set("timeline")}>

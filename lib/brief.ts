@@ -1,13 +1,5 @@
 /** Project-brief form: options, limits and validation shared by the form and the API route. */
 
-export const BUDGET_OPTIONS = [
-  { value: "", label: "لم أحدد بعد" },
-  { value: "a", label: "أقل من 20 ألف ريال" },
-  { value: "b", label: "20 – 60 ألف ريال" },
-  { value: "c", label: "60 – 200 ألف ريال" },
-  { value: "d", label: "أكثر من 200 ألف ريال" },
-] as const;
-
 export const TIMELINE_OPTIONS = [
   { value: "", label: "مرن" },
   { value: "a", label: "شهر أو أقل" },
@@ -21,6 +13,7 @@ export type Brief = {
   phone: string;
   company: string;
   desc: string;
+  /** Approximate budget in riyals as plain digits ("50000"), or "" when left blank. */
   budget: string;
   timeline: string;
 };
@@ -33,7 +26,7 @@ export const MAX_LENGTH: Record<keyof Brief, number> = {
   phone: 40,
   company: 160,
   desc: 5000,
-  budget: 1,
+  budget: 10, // digits, up to 9,999,999,999
   timeline: 1,
 };
 
@@ -54,7 +47,7 @@ export function validateBrief(b: Brief): string | null {
   for (const key of Object.keys(MAX_LENGTH) as (keyof Brief)[]) {
     if (b[key].length > MAX_LENGTH[key]) return MESSAGES.tooLong;
   }
-  if (!BUDGET_OPTIONS.some((o) => o.value === b.budget)) return MESSAGES.invalid;
+  if (!/^\d*$/.test(b.budget)) return MESSAGES.invalid;
   if (!TIMELINE_OPTIONS.some((o) => o.value === b.timeline)) return MESSAGES.invalid;
   return null;
 }
@@ -76,4 +69,9 @@ export function toBrief(input: unknown): Brief {
 
 export function labelOf(options: readonly { value: string; label: string }[], value: string) {
   return options.find((o) => o.value === value)?.label ?? value;
+}
+
+/** "50000" → "50,000" */
+export function groupDigits(digits: string) {
+  return digits.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }

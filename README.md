@@ -47,7 +47,7 @@ npm run dev        # http://localhost:3000
 | الإيميل، رقم الواتساب، الموقع، عنوان ووصف الموقع | `lib/site.ts` |
 | المشاريع (الأسماء، الأرقام، اللقطات) | `lib/projects.ts` |
 | الأسئلة الشائعة | `lib/faqs.ts` |
-| خيارات الميزانية والجدول الزمني في النموذج | `lib/brief.ts` |
+| خيارات الجدول الزمني في النموذج | `lib/brief.ts` |
 | شعارات العملاء | `public/clients/` و `components/ClientLogos.tsx` |
 | نصوص كل قسم | `components/*.tsx` (ملف لكل قسم بنفس ترتيب الصفحة) |
 | الشعار | `public/brand/logo.png` · أيقونة المتصفح `app/icon.svg` · صورة المشاركة `app/opengraph-image.png` |
