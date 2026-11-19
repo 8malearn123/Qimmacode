@@ -13,10 +13,6 @@ export function Brief() {
       <div style={{ maxWidth: 1180, margin: "0 auto", padding: "0 clamp(16px,3vw,30px)" }}>
         <div style={{ background: "var(--qm-gradient-hero)", borderRadius: 24, padding: "clamp(24px,3.4vw,44px)", boxShadow: "var(--qm-shadow-raised)", display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(min(100%,320px),1fr))", gap: "clamp(26px,3.5vw,46px)", alignItems: "start" }}>
           <div>
-            <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "rgba(255,255,255,.16)", color: "#fff", padding: "7px 14px", borderRadius: 999, fontSize: 12.5, fontWeight: 600, marginBottom: 20 }}>
-              <span className="msr" aria-hidden="true" style={{ fontSize: 16 }}>bolt</span>
-              نستقبل مشروعين جدد هذا الشهر
-            </div>
             <h2 style={{ margin: "0 0 16px", fontSize: "clamp(26px,3.2vw,40px)", fontWeight: 700, lineHeight: 1.15, letterSpacing: -0.4, color: "#fff" }}>
               أخبرنا عن مشروعك،
               <br />
