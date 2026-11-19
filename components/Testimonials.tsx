@@ -1,4 +1,3 @@
-import { ProjectLink } from "@/components/ProjectLink";
 import { Avatar } from "@/components/ui/Avatar";
 
 export function Testimonials() {
@@ -43,9 +42,6 @@ export function Testimonials() {
                   <div style={{ fontSize: 13, fontWeight: 700 }}>نورة العتيبي</div>
                   <div style={{ fontSize: 11.5, color: "var(--qm-muted)" }}>مديرة منتج، شركة تجزئة</div>
                 </div>
-                <ProjectLink index={1} className="hv-bg-primary-tint qm-focus" title="شاهد المشروع" aria-label="شاهد المشروع: تطبيق توصيل للجوال" style={{ width: 30, height: 30, borderRadius: "50%", background: "var(--qm-surface-soft)", border: "1px solid var(--qm-hairline)", display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer", flexShrink: 0, transition: "background var(--qm-dur-fast)" }}>
-                  <span className="msr" aria-hidden="true" style={{ fontSize: 15, color: "var(--qm-primary)" }}>arrow_back</span>
-                </ProjectLink>
               </div>
             </div>
             <div style={{ flex: 1, background: "var(--qm-surface)", border: "1px solid var(--qm-border)", borderRadius: 20, boxShadow: "var(--qm-shadow-card)", padding: 22, display: "flex", flexDirection: "column", gap: 14 }}>
@@ -61,9 +57,6 @@ export function Testimonials() {
                   <div style={{ fontSize: 13, fontWeight: 700 }}>ماجد الشمري</div>
                   <div style={{ fontSize: 11.5, color: "var(--qm-muted)" }}>مدير تقني، شركة لوجستية</div>
                 </div>
-                <ProjectLink index={2} className="hv-bg-primary-tint qm-focus" title="شاهد المشروع" aria-label="شاهد المشروع: لوحة تحليلات لوجستية" style={{ width: 30, height: 30, borderRadius: "50%", background: "var(--qm-surface-soft)", border: "1px solid var(--qm-hairline)", display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer", flexShrink: 0, transition: "background var(--qm-dur-fast)" }}>
-                  <span className="msr" aria-hidden="true" style={{ fontSize: 15, color: "var(--qm-primary)" }}>arrow_back</span>
-                </ProjectLink>
               </div>
             </div>
           </div>

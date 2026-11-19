@@ -3,26 +3,33 @@
  *
  * Screenshots live in public/projects/. Desktop projects use one 16:9 image
  * (shown in a browser frame; capture the live site at 1440×810 @2x and save it
- * as WebP at 1920×1080); phone projects use two (shown in two phone frames,
- * ~9:17). Without screenshots the illustrated `preview` is shown instead.
+ * as WebP at 1920×1080); phone projects use two, shown side by side in phone
+ * frames (capture at 390×760 @2x and save as WebP at 780×1520).
  */
 export type ProjectMetric = { v: string; l: string };
+
+/** A chat message shown beside a phone project's screens: how its link reaches people. */
+export type ProjectMessage = { lines: string[]; link: string; time: string };
 
 export type Project = {
   /** Two-digit Arabic-Indic number shown on the tab. */
   num: string;
   name: string;
   tag: string;
-  /** Address shown in the browser frame. */
-  url: string;
+  /** Address shown in the frame's top bar. Left out while the client hasn't announced the project. */
+  url?: string;
   /** Link to the live product; opened by the front card and a «زيارة الموقع» button next to the metrics. */
   href?: string;
+  /** Built, but the client hasn't announced it: a «قيد الإطلاق» badge stands in for the visit button. */
+  upcoming?: boolean;
+  /** Status or date shown at the end of the frame's top bar. */
   meta: string;
   device: "desktop" | "phone";
-  /** Illustrated stand-in, used only when the project has no `screens`. */
-  preview?: "pm" | "delivery" | "analytics" | "assistant";
   metrics: ProjectMetric[];
-  screens?: string[];
+  screens: string[];
+  /** Side of a desktop screenshot kept in view when a narrow card (phones) crops it. Default: the centre. */
+  focus?: "right";
+  message?: ProjectMessage;
 };
 
 export const PROJECTS: Project[] = [
@@ -45,44 +52,75 @@ export const PROJECTS: Project[] = [
   },
   {
     num: "٠٢",
-    name: "تطبيق توصيل للجوال",
-    tag: "جوال · iOS + أندرويد",
-    url: "delivery.qimma.demo",
-    meta: "١٠ أسابيع · ٢٠٢٥",
-    device: "phone",
-    preview: "delivery",
+    name: "هيت قهوة مختصة",
+    tag: "مقاهي · ويب",
+    // The new site is still on its Vercel address: heetcoffee.com serves the old one (Nov 2026).
+    url: "heet-website.vercel.app",
+    href: "https://heet-website.vercel.app/",
+    meta: "يعمل الآن",
+    device: "desktop",
+    // From the live site, Nov 2026: 70 items across the sections of /menu,
+    // 3 branches on /branches (2 in Riyadh, 1 in Jazan), and an English version.
     metrics: [
-      { v: "منصتان", l: "من كود واحد" },
-      { v: "4.8", l: "تقييم المتجر" },
-      { v: "35%-", l: "زمن التوصيل" },
+      { v: "70", l: "صنفًا في المنيو" },
+      { v: "3", l: "فروع" },
+      { v: "لغتان", l: "عربي وإنجليزي" },
     ],
+    screens: ["/projects/heet.webp"],
   },
   {
     num: "٠٣",
-    name: "لوحة تحليلات لوجستية",
-    tag: "لوحات تحكم · بيانات",
-    url: "metrics.qimma.demo",
-    meta: "٦ أسابيع · ٢٠٢٤",
+    name: "منصة فرصة",
+    tag: "مبادرة مجتمعية · ويب",
+    url: "forsajobs.org",
+    href: "https://www.forsajobs.org/",
+    meta: "يعمل الآن",
     device: "desktop",
-    preview: "analytics",
+    // From the live site, Nov 2026: all 17 governorates of Jazan in its filter,
+    // 21 talents listed, and free with no commission.
     metrics: [
-      { v: "12M", l: "صف بيانات" },
-      { v: "أقل من ثانية", l: "زمن التقرير" },
-      { v: "6", l: "تكاملات" },
+      { v: "17", l: "محافظة في جازان" },
+      { v: "21", l: "موهبة" },
+      { v: "0%", l: "عمولة" },
     ],
+    screens: ["/projects/forsa.webp"],
+    focus: "right",
   },
   {
     num: "٠٤",
-    name: "مساعد ذكي لخدمة العملاء",
-    tag: "ذكاء اصطناعي",
-    url: "ai.qimma.demo",
-    meta: "٥ أسابيع · ٢٠٢٥",
-    device: "desktop",
-    preview: "assistant",
+    name: "دعوات افتتاح هود",
+    tag: "دعوات وحجوزات · جوال",
+    // Every invitation link is personal, so there is nothing public to link to.
+    url: "hood.qimmakud.com",
+    meta: "نوفمبر ٢٠٢٦",
+    device: "phone",
     metrics: [
-      { v: "70%", l: "ردود آلية" },
-      { v: "24/7", l: "استجابة" },
-      { v: "عربي", l: "يفهم اللهجات المحلية" },
+      { v: "دعوة", l: "باسم كل ضيف" },
+      { v: "موعد", l: "يختاره بنفسه" },
+      { v: "باركود", l: "للدخول" },
     ],
+    // Captured with a sample guest in the app's local mode: no real invitee, and nothing written to its database.
+    screens: ["/projects/hood-invite.webp", "/projects/hood-ticket.webp"],
+    // The invitation as the system words it for WhatsApp, for the same sample guest.
+    message: {
+      lines: ["خالد الحربي، يسعدنا حضورك افتتاح هود ☕", "لك ولرفيقك متّسع", "هذه دعوتك الشخصية، اختر وقتك من هنا:"],
+      link: "hood.qimmakud.com/index.html?i=eyJ2IjoxLCJpZCI6…",
+      time: "٧:٣٠ م",
+    },
+  },
+  {
+    num: "٠٥",
+    name: "بينك كيك",
+    tag: "متجر حلويات · ويب",
+    // The client hasn't announced the store yet: no address or link until they do.
+    upcoming: true,
+    meta: "قيد الإطلاق",
+    device: "desktop",
+    metrics: [
+      { v: "صمّم كيكتك", l: "خطوة بخطوة" },
+      { v: "توصيل", l: "في نفس اليوم" },
+    ],
+    screens: ["/projects/pinkcake.webp"],
+    focus: "right",
   },
 ];
