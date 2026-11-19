@@ -118,6 +118,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar { width: 0; height: 0; display:
   [data-rsp="deck-chips"] > div { padding: 6px 11px !important; gap: 5px !important; }
   [data-rsp="deck-chips"] > div > span:first-child { font-size: 13.5px !important; }
   [data-rsp="deck-chips"] > div > span:last-child { font-size: 10.5px !important; }
+  [data-rsp="deck-visit"] { padding: 6px 12px !important; gap: 5px !important; font-size: 12px !important; }
   [data-rsp="duo-wrap"] { gap: 14px !important; }
   [data-rsp="duo-phone"] { width: min(36vw, 150px) !important; }
 }
@@ -148,6 +149,12 @@ html::-webkit-scrollbar, body::-webkit-scrollbar { width: 0; height: 0; display:
 }
 .qm-unbutton:focus-visible,
 .qm-focus:focus-visible { outline: 2px solid var(--qm-primary); outline-offset: 2px; }
+/* «زيارة الموقع» in the work deck: two-tone ring, visible on dark and light deck fields. */
+.qm-visit:focus-visible { outline: 2px solid var(--qm-surface); outline-offset: 0; box-shadow: 0 0 0 4px var(--qm-ink) !important; }
+/* Front deck card that links to the live project: grows a touch from its bottom edge on hover. */
+@media (hover: hover) {
+  .qm-deck-live:hover { transform: rotate(0deg) translateX(0%) translateY(0px) scale(1.015) !important; }
+}
 
 /* Project preview illustrations (components/ProjectPreviews.tsx):
    hide secondary panes when the deck card is narrow. */

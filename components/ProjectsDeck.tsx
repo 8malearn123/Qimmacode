@@ -65,21 +65,42 @@ export function ProjectsDeck() {
               <span style={{ fontSize: 11.5, color: "var(--qm-subtle)" }}>{m.l}</span>
             </div>
           ))}
+          {current.href && (
+            <a
+              href={current.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`زيارة الموقع: ${current.name} (يفتح في تبويب جديد)`}
+              data-rsp="deck-visit"
+              className="hv-lift qm-visit"
+              style={{ display: "inline-flex", alignItems: "center", gap: 7, padding: "10px 16px", borderRadius: 999, background: "var(--qm-ink)", color: "#fff", fontSize: 13, fontWeight: 700, lineHeight: 1.2, whiteSpace: "nowrap", boxShadow: "0 16px 34px -14px rgba(30,26,52,.35)", transition: "transform var(--qm-dur-fast)" }}
+            >
+              <span className="msr" aria-hidden="true" style={{ fontSize: "1.3em", color: "var(--qm-mint)" }}>language</span>
+              زيارة الموقع
+            </a>
+          )}
         </div>
 
         <div style={{ position: "relative", height: "clamp(320px,36vw,470px)" }}>
           {PROJECTS.map((p, i) => {
             const off = (i - active + PROJECTS.length) % PROJECTS.length;
             const c = DECK_POS[off] ?? DECK_POS[3];
+            const live = off === 0 && !!p.href;
             return (
               <div
                 key={p.num}
                 data-rsp="deck-card"
                 aria-hidden="true"
+                className={live ? "qm-deck-live" : undefined}
                 onClick={() => select(i)}
                 style={{ position: "absolute", insetInline: 0, marginInline: "auto", bottom: 0, width: "min(84%, 760px)", cursor: off ? "pointer" : "default", background: "var(--qm-surface)", border: "1px solid var(--qm-border)", borderRadius: "22px 22px 0 0", overflow: "hidden", boxShadow: "0 24px 60px -24px rgba(30,26,52,.45)", transform: `rotate(${c.r}deg) translateX(${c.x}%) translateY(${c.y}px) scale(${c.s})`, transformOrigin: "bottom center", zIndex: 10 - off, transition: "transform .5s cubic-bezier(.22,.61,.36,1)" }}
               >
                 {p.device === "phone" ? <PhoneCard project={p} /> : <DesktopCard project={p} />}
+                {live && (
+                  // The front card opens the live site on click. Kept out of the tab order:
+                  // keyboard and screen-reader users get the «زيارة الموقع» link above.
+                  <a href={p.href} target="_blank" rel="noopener noreferrer" tabIndex={-1} style={{ position: "absolute", inset: 0, zIndex: 1 }} />
+                )}
               </div>
             );
           })}
