@@ -70,6 +70,7 @@ p { text-wrap: pretty; }
 @keyframes qmNotif { 0%, 18% { opacity: 0; transform: translateY(-10px); } 24%, 84% { opacity: 1; transform: none; } 90%, 100% { opacity: 0; transform: translateY(-6px); } }
 @keyframes qmPing { 0% { transform: scale(.85); opacity: .5; } 70%, 100% { transform: scale(1.5); opacity: 0; } }
 @keyframes qmTabRun { from { width: 0%; } to { width: 100%; } }
+@keyframes qmMsgIn { from { opacity: 0; transform: translateY(10px) scale(.96); } to { opacity: 1; transform: none; } }
 @keyframes qmNfcTap { 0%, 10% { transform: rotate(10deg) translate(-38px, 22px); } 22%, 74% { transform: rotate(5deg) translate(0, 0); } 86%, 100% { transform: rotate(10deg) translate(-38px, 22px); } }
 @keyframes qmNfcRing { 0%, 20% { opacity: 0; transform: scale(.45); } 27% { opacity: .85; } 40% { opacity: 0; transform: scale(1.7); } 100% { opacity: 0; transform: scale(.45); } }
 @keyframes qmNfcSheet { 0%, 25% { transform: translateY(112%); } 34%, 78% { transform: translateY(0); } 88%, 100% { transform: translateY(112%); } }
@@ -90,6 +91,11 @@ html { overflow-x: clip; scrollbar-width: none; }
 html::-webkit-scrollbar, body::-webkit-scrollbar { width: 0; height: 0; display: none; }
 
 /* ── Responsive overrides (elements are tagged with data-rsp="…") ────────── */
+/* Work deck tabs: once five no longer fit on one row, go three and two
+   instead of leaving the last tab alone on a full-width row. */
+@media (max-width: 1107px) {
+  [data-rsp="tab"] { flex-basis: calc((100% - 24px) / 3) !important; }
+}
 @media (max-width: 745px) {
   [data-rsp="step-vis"] { order: 2; }
   [data-rsp="faq-grid"] { grid-template-columns: 1fr !important; }
@@ -119,7 +125,8 @@ html::-webkit-scrollbar, body::-webkit-scrollbar { width: 0; height: 0; display:
   [data-rsp="deck-chips"] > div > span:first-child { font-size: 13.5px !important; }
   [data-rsp="deck-chips"] > div > span:last-child { font-size: 10.5px !important; }
   [data-rsp="deck-visit"] { padding: 6px 12px !important; gap: 5px !important; font-size: 12px !important; }
-  [data-rsp="duo-wrap"] { gap: 14px !important; }
+  [data-rsp="duo-wrap"] { gap: 14px !important; padding-inline-start: 0 !important; }
+  [data-rsp="duo-msg"] { display: none !important; }
   [data-rsp="duo-phone"] { width: min(36vw, 150px) !important; }
 }
 @media (max-width: 620px) {
@@ -155,11 +162,6 @@ html::-webkit-scrollbar, body::-webkit-scrollbar { width: 0; height: 0; display:
 @media (hover: hover) {
   .qm-deck-live:hover { transform: rotate(0deg) translateX(0%) translateY(0px) scale(1.015) !important; }
 }
-
-/* Project preview illustrations (components/ProjectPreviews.tsx):
-   hide secondary panes when the deck card is narrow. */
-.qm-pv { container-type: inline-size; }
-@container (max-width: 460px) { .qm-pv-wide { display: none !important; } }
 
 /* ── Reveal on scroll (components/RevealOnScroll.tsx flips data-revealed) ── */
 @media (scripting: enabled) and (prefers-reduced-motion: no-preference) {

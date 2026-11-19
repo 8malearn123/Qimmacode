@@ -19,7 +19,7 @@ const ProjectsContext = createContext<ProjectsState | null>(null);
 /**
  * Shared state for the work deck: which project is on stage, auto-advancing
  * every ROTATE_MS (paused while the tab is hidden or the user prefers reduced
- * motion). Lets other sections (testimonials) put a project on stage.
+ * motion). Lets other sections put a project on stage through `select`.
  */
 export function ProjectsProvider({ children }: { children: ReactNode }) {
   const [state, setState] = useState({ active: 0, cycle: 0 });
